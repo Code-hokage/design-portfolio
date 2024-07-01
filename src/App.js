@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SharedLayout from './layout';
 import Home from './pages/home';
-import Projects from './pages/projects';
+import Designs from './pages/designs';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="designs" element={<Designs />} />
         </Route>
       </Routes>
     </Router>
