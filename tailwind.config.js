@@ -14,7 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/public/imgs/man.png')",
-        rabahaCard: "url('/public/imgs/rabahamallCard.png')",
+        rabahamallCard: "url('/public/imgs/rabahamallCard.png')",
       },
       keyframes: {
         refine: {
