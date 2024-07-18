@@ -6,13 +6,13 @@ export const NavLinks = [
     path: "/",
   },
   {
-    Name: "Designs",
-    path: "/designs",
-  },
-  {
     Name: "Web Projects",
     path: "/webprojects",
     clicked: false,
+  },
+  {
+    Name: "Designs",
+    path: "/designs",
   },
 ];
 
@@ -20,28 +20,28 @@ export const Socials = [
   {
     Name: "GitHub",
     id: "1",
-    hrefUrl: "/",
+    hrefUrl: "https://github.com/adnanaadam",
     icon: FaGithub,
     style: "hover:text-grey",
   },
   {
     Name: "LinkedIn",
     id: "2",
-    hrefUrl: "/",
+    hrefUrl: "https://www.linkedin.com/in/adam-adnan-35657b251",
     icon: FaLinkedinIn,
     style: "hover:text-[#004182]",
   },
   {
     Name: "Instagram",
     id: "3",
-    hrefUrl: "/",
+    hrefUrl: "https://www.instagram.com/addy_sharawi",
     icon: FaInstagram,
     style: "hover:text-[#F56040]",
   },
   {
     Name: "X",
     id: "4",
-    hrefUrl: "/",
+    hrefUrl: "https://x.com/addy_sharawi",
     icon: FaXTwitter,
     style: "hover:text-grey",
   },

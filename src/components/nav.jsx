@@ -15,9 +15,9 @@ const Navbar = () => {
           </span>
         </div>
 
-        <div className="basis-1/2 flex justify-end">
-          <nav className="flex justify-center items-center *:px-4">
-            <ul className="flex *:px-3 justify-center items-start">
+        <div className="basis-1/2 flex justify-end items-center">
+          <nav className="flex justify-center items-center">
+            <ul className="flex *:px-4 justify-center">
               {NavLinks.map((link) => {
                 return (
                   <NavLink
@@ -35,7 +35,7 @@ const Navbar = () => {
               })}
             </ul>
 
-            <Link className="flex items-center justify-center cursor-pointer">
+            <Link to="mailto:adnanmish30@gmail.com" className="flex items-center justify-center cursor-pointer">
               <div class="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold shadow text-blue transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 bg-grey group">
                 <span class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-blue group-hover:h-full"></span>
                 <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
