@@ -1,4 +1,9 @@
-import { FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 export const NavLinks = [
   {
@@ -44,6 +49,54 @@ export const Socials = [
     hrefUrl: "https://x.com/addy_sharawi",
     icon: FaXTwitter,
     style: "hover:text-grey",
+  },
+];
+
+export const WebProjectsItems = [
+  {
+    id: "1",
+    url: "imgs/aan-ps.png",
+    title: "Professional Growth",
+  },
+  {
+    id: "2",
+    url: "imgs/bus-ps.png",
+    title: "Strategic Planning",
+  },
+  {
+    id: "3",
+    url: "imgs/bus01.jpg",
+    title: "Networking Opportunities",
+  },
+  {
+    id: "4",
+    url: "imgs/bus02.png",
+    title: "Professional Growth",
+  },
+  {
+    id: "5",
+    url: "/imgs/caspa-ai.png",
+    title: "Strategic Planning",
+  },
+  {
+    id: "6",
+    url: "imgs/hancho-ps.png",
+    title: "Networking Opportunities",
+  },
+  {
+    id: "7",
+    url: "imgs/mine/akagami-01.jpg",
+    title: "Professional Growth",
+  },
+  {
+    id: "8",
+    url: "imgs/mine/luffyai.png",
+    title: "Strategic Planning",
+  },
+  {
+    id: "9",
+    url: "imgs/mine/Straw_hat-01.png",
+    title: "Networking Opportunities",
   },
 ];
 

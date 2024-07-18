@@ -65,7 +65,7 @@ const Home = () => {
           <div className="z-50 basis-1/2 text-end flex flex-col items-end justify-between">
             {/* dateTime */}
             <div>
-              <DateTime></DateTime>
+              <DateTime />
             </div>
 
             {/* designs */}
