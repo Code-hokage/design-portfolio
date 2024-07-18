@@ -1,14 +1,16 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { Socials } from "../db";
+import DateTime from "../components/dateTime";
 
 const Home = () => {
   return (
     <>
       <main className="relative bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
         {/* profile pic */}
-        <div className="absolute overflow-hidden w-1/2 h-full">
-          <img src="/imgs/man.png" alt="man" className="size-max" />
+        <div className="fixed overflow-hidden w-1/2 h-full">
+          <div className="bg-hero bg-contain bg-no-repeat w-full h-full fixed"></div>
+          {/* <img src="/imgs/man.png" alt="man" className="size-max" /> */}
         </div>
 
         <div className="flex w-full h-full pt-40 pb-12 justify-between">
@@ -48,7 +50,7 @@ const Home = () => {
                       className="pt-1"
                     >
                       <social.icon
-                        className={`${social.style} text-blue size-8 hover:scale-105 hover:bg-white hover:animate-none p-1 rounded-lg duration-500 animate-pulse`}
+                        className={`${social.style} text-blue size-8 hover:scale-105 hover:bg-white p-1 rounded-lg duration-500`}
                       />
                     </Link>
                     <span className="absolute text-grey -top-10 left-[50%] -translate-x-[50%] origin-left rounded-lg bg-white p-2 text-xs font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-90 hidden group-hover:flex">
@@ -60,23 +62,29 @@ const Home = () => {
             </nav>
           </div>
 
-          {/* designs */}
-          <div className="z-50 basis-1/2 text-end flex flex-col gap-2 items-end justify-end">
-            <h2 className="text-3xl text-blue uppercase font-medium text-end">
-              graphic designer
-            </h2>
-            <p>
-              I create exceptional and beautiful designs. <br /> Here are some
-              of my personal projects. <br /> Explore and get a sense of my
-              design aesthetics.
-            </p>
-            <Link
-              to="/designs"
-              className="text-blue flex justify-end items-center gap-2 group"
-            >
-              Explore designs
-              <FaArrowRight className="group-hover:translate-x-2 duration-500 ease-in-out" />
-            </Link>
+          <div className="z-50 basis-1/2 text-end flex flex-col items-end justify-between">
+            {/* dateTime */}
+            <div>
+              <DateTime></DateTime>
+            </div>
+
+            {/* designs */}
+            <div className="flex flex-col gap-2 items-end justify-end">
+              <h2 className="text-3xl text-blue uppercase font-medium text-end">
+                graphic designer
+              </h2>
+              <p>
+                I create exceptional and beautiful designs.
+                <br /> Explore and get a sense of my design aesthetics.
+              </p>
+              <Link
+                to="/designs"
+                className="text-blue flex justify-end items-center gap-2 group"
+              >
+                Explore designs
+                <FaArrowRight className="group-hover:translate-x-2 duration-500 ease-in-out" />
+              </Link>
+            </div>
           </div>
         </div>
 
