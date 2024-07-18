@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         blue: "#0ef",
-        darkBlue: "#04091ee6",
+        darkBlue: "#04091e",
         purple: "#ae00ff",
         grey: "#232531",
       },
@@ -14,6 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/public/imgs/man.png')",
+        rabahaCard: "url('/public/imgs/rabahamallCard.png')",
       },
       keyframes: {
         refine: {

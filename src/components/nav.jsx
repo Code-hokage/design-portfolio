@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="z-50 flex justify-between sticky -my-10 top-0 items-center py-5 px-16">
+      <header className="z-50 flex justify-between sticky -my-10 top-0 items-center py-4 px-16">
         <div className="basis-1/2">
           <span className="text-2xl font-extrabold font-playwrite">
             <Link to="/">ADDY</Link>

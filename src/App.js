@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SharedLayout from './layout';
 import Home from './pages/home';
 import Designs from './pages/designs';
+import Webprojects from './pages/webprojects';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
+          <Route path="/webprojects" element={<Webprojects />} />
           <Route path="/designs" element={<Designs />} />
         </Route>
       </Routes>
