@@ -59,6 +59,16 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    github: {
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "2",
@@ -66,6 +76,16 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    github: {
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "3",
@@ -73,6 +93,16 @@ export const WebProjectsItems = [
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    github: {
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "4",
@@ -80,6 +110,11 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "5",
@@ -87,6 +122,11 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "6",
@@ -94,6 +134,11 @@ export const WebProjectsItems = [
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "7",
@@ -101,6 +146,11 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "8",
@@ -108,6 +158,11 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
   {
     id: "9",
@@ -115,7 +170,10 @@ export const WebProjectsItems = [
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
   },
 ];
-
-export const Services = ["Web design", "Graphic design", "Web dev"];

@@ -1,10 +1,12 @@
-import ImageSlider from "../components/imgSlider";
+
+import PageContent from "../components/allPageContent";
+import { WebProjectsItems } from "../db";
 
 const Webprojects = () => {
   return (
     <>
       <div className="w-screen h-screen" role="main">
-        <ImageSlider />
+        <PageContent pageContent={WebProjectsItems} />
       </div>
     </>
   );

@@ -28,7 +28,7 @@ const Home = () => {
                 technical capabilities.
               </p>
               <Link
-                to="designs"
+                to="/webprojects"
                 className="text-blue flex justify-center items-center gap-2 group text-base"
               >
                 Explore projects{" "}

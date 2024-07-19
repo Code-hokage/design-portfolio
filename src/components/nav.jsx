@@ -17,7 +17,7 @@ const Navbar = () => {
 
         <div className="basis-1/2 flex justify-end items-center">
           <nav className="flex justify-center items-center">
-            <ul className="flex *:px-4 justify-center">
+            <ul className="flex *:mx-4 justify-center">
               {NavLinks.map((link) => {
                 return (
                   <NavLink
