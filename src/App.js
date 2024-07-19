@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SharedLayout from './layout';
 import Home from './pages/home';
-import Designs from './pages/designs';
 import Webprojects from './pages/webprojects';
+import DesignProjects from './pages/designProjects';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="/webprojects" element={<Webprojects />} />
-          <Route path="/designs" element={<Designs />} />
+          <Route path="/designs" element={<DesignProjects />} />
         </Route>
       </Routes>
     </Router>

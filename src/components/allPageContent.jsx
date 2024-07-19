@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import Textbox from "./textbox";
+import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
 
-const PageContent = ( pageItems ) => {
+const PageContent = (pageItems) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
 
@@ -22,8 +22,8 @@ const PageContent = ( pageItems ) => {
   // Define styles for the active and non-active images
   const getSlideStyle = (index) => {
     return index === currentIndex
-      ? "opacity-100 border-4 border-[crimson] z-10 transform scale-110"
-      : "opacity-60";
+      ? "opacity-100 border-2 border-[crimson] z-10 transform scale-125"
+      : "opacity-50";
   };
 
   return (
@@ -35,11 +35,12 @@ const PageContent = ( pageItems ) => {
           <Textbox
             title={pageItems.pageContent[currentIndex].title}
             description={pageItems.pageContent[currentIndex].description}
-            iconName={pageItems.pageContent[currentIndex].github.iconName}
-            hrefUrl={pageItems.pageContent[currentIndex].github.hrefUrl}
-            iconStyle={pageItems.pageContent[currentIndex].github.style}
+            Icon={pageItems.pageContent[currentIndex].icon.Icon}
+            iconName={pageItems.pageContent[currentIndex].icon.iconName}
+            hrefUrl={pageItems.pageContent[currentIndex].icon.hrefUrl}
+            iconStyle={pageItems.pageContent[currentIndex].icon.style}
           />
-         <Showcase images={pageItems.pageContent[currentIndex].images} />
+          <Showcase images={pageItems.pageContent[currentIndex].images} />
         </div>
 
         <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
@@ -53,11 +54,11 @@ const PageContent = ( pageItems ) => {
             }
             aria-label="Previous slide"
           >
-            <span className="text-6xl text-blue">{`<`}</span>
+            <span className="text-6xl text-blue opacity-50 hover:opacity-100">{`<`}</span>
           </button>
 
           <div
-            className="w-1/2 relative h-32 overflow-x-auto flex items-center no-scrollbar"
+            className="max-w-[50%] relative h-32 overflow-x-auto flex items-center no-scrollbar"
             aria-live="polite"
             aria-atomic="true"
             ref={sliderRef}
@@ -68,7 +69,7 @@ const PageContent = ( pageItems ) => {
                 key={index}
                 src={image.url}
                 alt={`Slide ${index}`}
-                className={`slide rounded-lg w-32 h-28 object-cover mx-2 transition-opacity duration-500 cursor-pointer slide-${index} ${getSlideStyle(
+                className={`slide rounded-lg w-32 h-24 object-cover mx-3 transition-opacity duration-500 cursor-pointer slide-${index} ${getSlideStyle(
                   index
                 )}`}
                 data-index={index}
@@ -85,7 +86,7 @@ const PageContent = ( pageItems ) => {
             }
             aria-label="Next slide"
           >
-            <span className="text-6xl text-blue">{`>`}</span>
+            <span className="text-6xl text-blue opacity-50 hover:opacity-100">{`>`}</span>
           </button>
         </div>
 

@@ -59,7 +59,8 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
-    github: {
+    icon: {
+      Icon: FaGithub,
       hrefUrl: "/",
       iconName: "Github",
       style: "hover:text-grey",
@@ -76,7 +77,8 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
-    github: {
+    icon: {
+      Icon: FaGithub,
       hrefUrl: "/",
       iconName: "Github",
       style: "hover:text-grey",
@@ -93,7 +95,8 @@ export const WebProjectsItems = [
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
-    github: {
+    icon: {
+      Icon: FaGithub,
       hrefUrl: "/",
       iconName: "Github",
       style: "hover:text-grey",
@@ -110,6 +113,12 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },
@@ -122,6 +131,12 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },
@@ -134,6 +149,12 @@ export const WebProjectsItems = [
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },
@@ -146,6 +167,12 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },
@@ -158,6 +185,12 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },
@@ -170,6 +203,69 @@ export const WebProjectsItems = [
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
+  },
+];
+
+export const DesignProjectsItems = [
+  {
+    id: "1",
+    url: "imgs/aan-ps.png",
+    title: "Professional Growth",
+    description: "Lorem, ipsuidem impedit autsit nisi.",
+    bgStyle: "bg-west",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
+    images: [
+      { url: "/imgs/west/allcat.png" },
+      { url: "/imgs/west/promo.jpg" },
+      { url: "/imgs/west/ps02.png" },
+    ],
+  },
+  {
+    id: "2",
+    url: "imgs/bus-ps.png",
+    title: "Strategic Planning",
+    description: "Lorem, ipsuidem impedit autsit nisi.",
+    bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
+  },
+  {
+    id: "3",
+    url: "imgs/bus01.jpg",
+    title: "Networking Opportunities",
+    description: "Lorem, ipsuidem impedit autsit nisi.",
+    bgStyle: "bg-rabahamallCard",
+    icon: {
+      Icon: FaGithub,
+      hrefUrl: "/",
+      iconName: "Github",
+      style: "hover:text-grey",
+    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },

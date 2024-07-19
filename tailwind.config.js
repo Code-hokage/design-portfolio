@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         hero: "url('/public/imgs/man.png')",
         rabahamallCard: "url('/public/imgs/rabahamallCard.png')",
+        west: "url('/public/imgs/west/westBrandboard.png')",
       },
       keyframes: {
         refine: {

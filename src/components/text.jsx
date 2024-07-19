@@ -1,4 +1,3 @@
-import { FaGithub } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Textbox = ( prop ) => {
@@ -11,7 +10,7 @@ const Textbox = ( prop ) => {
         <p className="py-2">{prop.description}</p>
         <button className="group relative">
           <Link to={prop.hrefUrl} className="pt-1">
-            <FaGithub
+            <prop.Icon
               className={`${prop.iconStyle} text-blue size-8 hover:scale-105 hover:bg-white p-1 rounded-lg duration-500`}
             />
           </Link>
