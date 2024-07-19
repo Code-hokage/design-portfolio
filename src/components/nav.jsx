@@ -1,13 +1,14 @@
 import { NavLink, Link } from "react-router-dom";
 import { NavLinks } from "../db";
 import { FaArrowRight } from "react-icons/fa";
+import 'animate.css';
 
 const Navbar = () => {
-  const activeLink = "text-blue text-base font-normal border-b-2 border-blue";
+  const activeLink = "text-blue text-base border-b border-blue";
 
   return (
     <>
-      <header className="z-50 flex justify-between sticky -my-10 top-0 items-center py-4 px-16">
+      <header className="animate__animated animate__slideInDown z-50 flex justify-between sticky -my-10 top-0 items-center py-4 px-16">
         <div className="basis-1/2">
           <span className="text-2xl font-extrabold font-playwrite">
             <Link to="/">ADDY</Link>
@@ -16,8 +17,8 @@ const Navbar = () => {
         </div>
 
         <div className="basis-1/2 flex justify-end items-center">
-          <nav className="flex justify-center items-center">
-            <ul className="flex *:mx-4 justify-center">
+          <nav className="flex justify-center items-center gap-3">
+            <ul className="flex *:px-2 justify-center">
               {NavLinks.map((link) => {
                 return (
                   <NavLink
@@ -26,7 +27,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? activeLink
-                        : "text-base font-normal hover:text-blue hover:scale-105"
+                        : "text-base hover:text-blue hover:scale-105 mx-2"
                     }
                   >
                     {link.Name}

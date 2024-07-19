@@ -2,6 +2,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { Socials } from "../db";
 import DateTime from "../components/dateTime";
+import 'animate.css';
 
 const Home = () => {
   return (
@@ -32,7 +33,7 @@ const Home = () => {
                 className="text-blue flex justify-center items-center gap-2 group text-base"
               >
                 Explore projects{" "}
-                <FaArrowRight className="size-6 duration-500 animate-refineSlide relative" />
+                <FaArrowRight className="size-4 group-hover:translate-x-2 duration-500 ease-in-oute" />
               </Link>
             </div>
 
@@ -53,7 +54,7 @@ const Home = () => {
                         className={`${social.style} text-blue size-8 hover:scale-105 hover:bg-white p-1 rounded-lg duration-500`}
                       />
                     </Link>
-                    <span className="absolute text-grey -top-10 left-[50%] -translate-x-[50%] origin-left rounded-lg bg-white p-2 text-xs font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-90 hidden group-hover:flex">
+                    <span className="absolute text-grey -top-10 left-[50%] -translate-x-[50%] scale-0 origin-bottom rounded-lg bg-white p-2 text-xs font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:flex">
                       {social.Name}
                     </span>
                   </button>

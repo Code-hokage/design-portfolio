@@ -58,7 +58,7 @@ const PageContent = (pageItems) => {
           </button>
 
           <div
-            className="max-w-[50%] relative h-32 overflow-x-auto flex items-center no-scrollbar"
+            className="max-w-[50%] p-4 relative h-32 overflow-x-auto flex items-center no-scrollbar"
             aria-live="polite"
             aria-atomic="true"
             ref={sliderRef}
