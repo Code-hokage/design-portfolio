@@ -259,7 +259,7 @@ export const DesignProjectsItems = [
     url: "imgs/bus01.jpg",
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgStyle: "bg-rabahamallCard",
+    bgStyle: "bg-hero",
     icon: {
       Icon: FaGithub,
       hrefUrl: "/",

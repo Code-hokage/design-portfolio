@@ -9,14 +9,14 @@ const Home = () => {
     <>
       <main className="relative bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
         {/* profile pic */}
-        <div className="fixed overflow-hidden w-1/2 h-full">
+        <div className="fixed overflow-hidden w-1/2 h-full animate__animated animate__zoomIn animate__slow">
           <div className="bg-hero bg-contain bg-no-repeat w-full h-full fixed"></div>
           {/* <img src="/imgs/man.png" alt="man" className="size-max" /> */}
         </div>
 
         <div className="flex w-full h-full pt-40 pb-12 justify-between">
           {/* web dev */}
-          <div className="z-50 flex basis-1/2 flex-col justify-between items-start">
+          <div className="z-50 flex basis-1/2 flex-col justify-between items-start animate__animated animate__fadeInLeft">
             <div className="flex flex-col gap-2 items-start">
               <h3 className="text-2xl text-blue">Welcome!</h3>
               <h3 className="text-2xl">I am Adnan Adam a</h3>
@@ -63,7 +63,7 @@ const Home = () => {
             </nav>
           </div>
 
-          <div className="z-50 basis-1/2 text-end flex flex-col items-end justify-between">
+          <div className="z-50 basis-1/2 text-end flex flex-col items-end justify-between animate__animated animate__fadeInRight ">
             {/* dateTime */}
             <div>
               <DateTime />

@@ -38,7 +38,7 @@ module.exports = {
         refineSlide: "refine 1s infinite",
       },
       fontFamily: {
-        playwrite: ['"Playwrite HU"'],
+        logoFont: ['"Bebas Neue", "sans-serif"'],
       },
     },
   },

@@ -1,10 +1,10 @@
-import PageContent from "../components/allPageContent";
+import PageContent from "../components/projectsPageContent";
 import { WebProjectsItems } from "../db";
 
 const Webprojects = () => {
   return (
     <>
-      <div className="w-screen h-screen" role="main">
+      <div className="w-screen h-screen max-w-screen max-h-screen" role="main">
         <PageContent pageContent={WebProjectsItems} />
       </div>
     </>

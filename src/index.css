@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 * {
@@ -26,10 +26,10 @@ body {
   color: #fff;
 }
 
-.no-scrollbar::-webkit-scrollbar {
+body::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-.no-scrollbar {
+body, .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }

@@ -3,7 +3,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 const Showcase = ( images ) => {
   return (
     <>
-      <div className="">
+      <div className="transition-all duration-500 origin-bottom animate__animated animate__fadeInUp">
         <SimpleImageSlider
           width={160}
           height={120}

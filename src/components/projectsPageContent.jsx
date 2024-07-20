@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
+import 'animate.css';
 
 const PageContent = (pageItems) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,7 +15,7 @@ const PageContent = (pageItems) => {
         `.slide-${currentIndex}`
       );
       if (middleImage) {
-        middleImage.scrollIntoView({ behavior: "smooth", inline: "center" });
+        middleImage.scrollIntoView({ behavior: "smooth", inline: "center", transition: "all", duration: 500 });
       }
     }
   }, [currentIndex]);
@@ -43,7 +44,7 @@ const PageContent = (pageItems) => {
           <Showcase images={pageItems.pageContent[currentIndex].images} />
         </div>
 
-        <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
+        <div className="w-full flex justify-center items-center gap-4 cursor-pointer animate__animated animate__fadeInUp animate__delay-1s">
           <button
             className="flex"
             onClick={() =>
@@ -69,7 +70,7 @@ const PageContent = (pageItems) => {
                 key={index}
                 src={image.url}
                 alt={`Slide ${index}`}
-                className={`slide rounded-lg w-32 h-24 object-cover mx-3 transition-opacity duration-500 cursor-pointer slide-${index} ${getSlideStyle(
+                className={`slide rounded-lg w-32 h-24 object-cover mx-3 transition-opacity duration-700 cursor-pointer slide-${index} ${getSlideStyle(
                   index
                 )}`}
                 data-index={index}
@@ -90,11 +91,11 @@ const PageContent = (pageItems) => {
           </button>
         </div>
 
-        <div className="flex items-center justify-center px-10 pt-4">
+        <div className="flex items-center justify-center px-10 pt-4 animate__animated animate__fadeInUp animate__delay-2s">
           {pageItems.pageContent.map((image, index) => (
             <span
               key={index}
-              className={`h-3 w-3 mx-1 rounded-full cursor-pointer ${
+              className={`h-3 w-3 mx-1 rounded-full cursor-pointer transition duration-700 ${
                 currentIndex === index ? "bg-blue" : "bg-blue opacity-30"
               }`}
               onClick={() => setCurrentIndex(index)}

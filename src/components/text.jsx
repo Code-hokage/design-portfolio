@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 const Textbox = ( prop ) => {
   return (
     <>
-      <div className="text-start basis-2/3">
+      <div className="text-start basis-2/3 relative transition-all duration-500 origin-bottom animate__animated animate__fadeInUp">
         <h2 className="text-3xl text-blue font-medium uppercase">
           {prop.title}
         </h2>

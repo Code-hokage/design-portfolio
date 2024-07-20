@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       <header className="animate__animated animate__slideInDown z-50 flex justify-between sticky -my-10 top-0 items-center py-4 px-16">
         <div className="basis-1/2">
-          <span className="text-2xl font-extrabold font-playwrite">
+          <span className="text-3xl font-extrabold font-logoFont tracking-widest text-blue">
             <Link to="/">ADDY</Link>
             {/* <img src="/mylogo.png" alt="mylogo" className="h-14 w-16"/> */}
           </span>
