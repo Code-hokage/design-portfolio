@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <main className="relative bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
         {/* profile pic */}
-        <div className="fixed overflow-hidden w-1/2 h-full animate__animated animate__zoomIn animate__slow">
+        <div className="fixed overflow-hidden w-1/2 h-full animate__animated animate__fadeInUp animate__slow">
           <div className="bg-hero bg-contain bg-no-repeat w-full h-full fixed"></div>
           {/* <img src="/imgs/man.png" alt="man" className="size-max" /> */}
         </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
+import PropTypes from 'prop-types';
 import 'animate.css';
 
 const PageContent = (pageItems) => {
@@ -15,7 +16,17 @@ const PageContent = (pageItems) => {
         `.slide-${currentIndex}`
       );
       if (middleImage) {
-        middleImage.scrollIntoView({ behavior: "smooth", inline: "center", transition: "all", duration: 500 });
+        const containerWidth = sliderRef.current.offsetWidth;
+        const imageWidth = middleImage.offsetWidth;
+        const scrollPosition = middleImage.offsetLeft - (containerWidth / 2) + (imageWidth / 2);
+        
+        // Add the smooth scrolling class
+        sliderRef.current.classList.add('scroll-smooth');
+        sliderRef.current.scrollTo({ left: scrollPosition, behavior: "smooth" });
+        // Remove the smooth scrolling class after the transition
+        setTimeout(() => {
+          sliderRef.current.classList.remove('scroll-smooth');
+        }, 2000); // match the duration of your transition
       }
     }
   }, [currentIndex]);
@@ -28,10 +39,10 @@ const PageContent = (pageItems) => {
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full overflow-hidden">
       <Background bgStyle={pageItems.pageContent[currentIndex].bgStyle} />
 
-      <div className="w-full m-auto flex flex-col justify-center items-center -mt-16">
+      <div className="w-full m-auto flex flex-col justify-center items-center -mt-16 animate__animated animate__fadeInUp animate__slow">
         <div className="w-full *:z-50 px-16 flex justify-between items-start pb-10">
           <Textbox
             title={pageItems.pageContent[currentIndex].title}
@@ -44,7 +55,7 @@ const PageContent = (pageItems) => {
           <Showcase images={pageItems.pageContent[currentIndex].images} />
         </div>
 
-        <div className="w-full flex justify-center items-center gap-4 cursor-pointer animate__animated animate__fadeInUp animate__delay-1s">
+        <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
           <button
             className="flex"
             onClick={() =>
@@ -70,11 +81,11 @@ const PageContent = (pageItems) => {
                 key={index}
                 src={image.url}
                 alt={`Slide ${index}`}
-                className={`slide rounded-lg w-32 h-24 object-cover mx-3 transition-opacity duration-700 cursor-pointer slide-${index} ${getSlideStyle(
+                className={`slide rounded-lg w-32 h-24 object-cover mx-3 transition duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
                   index
                 )}`}
                 data-index={index}
-                style={{ scrollSnapAlign: "center" }}
+                // style={{ scrollSnapAlign: "center" }}
                 onClick={() => setCurrentIndex(index)}
               />
             ))}
@@ -91,11 +102,11 @@ const PageContent = (pageItems) => {
           </button>
         </div>
 
-        <div className="flex items-center justify-center px-10 pt-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <div className="flex items-center justify-center px-10 pt-4">
           {pageItems.pageContent.map((image, index) => (
             <span
               key={index}
-              className={`h-3 w-3 mx-1 rounded-full cursor-pointer transition duration-700 ${
+              className={`h-3 w-3 mx-1 rounded-full cursor-pointer transition duration-1000 ${
                 currentIndex === index ? "bg-blue" : "bg-blue opacity-30"
               }`}
               onClick={() => setCurrentIndex(index)}
@@ -106,6 +117,29 @@ const PageContent = (pageItems) => {
       </div>
     </div>
   );
+};
+
+PageContent.propTypes = {
+  pageItems: PropTypes.shape({
+    pageContent: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        bgStyle: PropTypes.string.isRequired,
+        images: PropTypes.arrayOf(
+          PropTypes.shape({
+            url: PropTypes.string.isRequired
+          })
+        ).isRequired,
+        icon: PropTypes.shape({
+          Icon: PropTypes.elementType.isRequired,
+          iconName: PropTypes.string.isRequired,
+          hrefUrl: PropTypes.string.isRequired,
+          style: PropTypes.object
+        }).isRequired
+      })
+    ).isRequired
+  }).isRequired
 };
 
 export default PageContent;
