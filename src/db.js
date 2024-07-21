@@ -19,6 +19,10 @@ export const NavLinks = [
     Name: "Designs",
     path: "/designs",
   },
+  {
+    Name: "About",
+    path: "/about",
+  },
 ];
 
 export const Socials = [
@@ -222,7 +226,8 @@ export const DesignProjectsItems = [
     id: "1",
     url: "imgs/aan-ps.png",
     title: "Professional Growth",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
+    description:
+      "Lorem, ipsuidem impedit autsit nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga ducimus, expedita obcaecati id, quos accusamus dolore! Asperiores dolore odit repudiandae, vitae ad et eveniet ut molestiae tempora laborum quo explicabo! Quam quasi voluptatum nam.",
     bgStyle: "bg-west",
     icon: {
       Icon: FaGithub,
@@ -240,7 +245,8 @@ export const DesignProjectsItems = [
     id: "2",
     url: "imgs/bus-ps.png",
     title: "Strategic Planning",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
+    description:
+      "Lorem, ipsuidem impedit autsit nisri id, quos accusamus dolore odit rep.",
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
@@ -258,7 +264,8 @@ export const DesignProjectsItems = [
     id: "3",
     url: "imgs/bus01.jpg",
     title: "Networking Opportunities",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
+    description:
+      "Lorem, ipsuidem impedit autsit nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga ducimus, expedita obcaecati id, quos accusamus dolore! Asperiores dolore odit repudiandae, vitae ad et eveniet ut molestiae tempora laborum quo explicabo! Quam quasi voluptatum nam.",
     bgStyle: "bg-hero",
     icon: {
       Icon: FaGithub,

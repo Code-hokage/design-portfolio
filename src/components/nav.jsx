@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="animate__animated animate__slideInDown z-50 flex justify-between sticky -my-10 top-0 items-center py-4 px-16">
+      <header className="animate__animated animate__slideInDown z-50 flex justify-between sticky -my-10 top-0 items-center py-2 px-16">
         <div className="basis-1/2">
           <span className="text-3xl font-extrabold font-logoFont tracking-widest text-blue">
             <Link to="/">ADDY</Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? activeLink
-                        : "text-base hover:text-blue hover:scale-105 mx-2"
+                        : "text-base hover:text-blue hover:scale-105 mx-2 transition duration-700"
                     }
                   >
                     {link.Name}
@@ -36,7 +36,7 @@ const Navbar = () => {
               })}
             </ul>
 
-            <Link to="mailto:adnanmish30@gmail.com" className="flex items-center justify-center cursor-pointer">
+            <Link to="/contact" className="flex items-center justify-center cursor-pointer">
               <div class="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold shadow text-blue transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 bg-grey group">
                 <span class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-blue group-hover:h-full"></span>
                 <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">

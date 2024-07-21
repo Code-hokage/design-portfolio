@@ -21,20 +21,29 @@ const Home = () => {
               <h3 className="text-2xl text-blue">Welcome!</h3>
               <h3 className="text-2xl">I am Adnan Adam a</h3>
               <h2 className="text-4xl font-medium text-blue uppercase">
-                frontend developer
+                <span>frontend developer</span> <br /><span className="text-[crimson]">+</span><span>designer</span>
               </h2>
               <p>
                 I create exceptional user friendly experiences. <br /> Here are
                 some of my personal projects. <br /> Explore and get a sense of
-                technical capabilities.
+                technical capabilities <br /> and design aesthetics.
               </p>
-              <Link
+              <div className="flex items-center gap-4">
+                <Link
                 to="/webprojects"
                 className="text-blue flex justify-center items-center gap-2 group text-base"
               >
-                Explore projects{" "}
+                Web projects{" "}
                 <FaArrowRight className="size-4 group-hover:translate-x-2 duration-500 ease-in-oute" />
               </Link>
+              <Link
+                to="/designs"
+                className="text-blue flex justify-center items-center gap-2 group text-base"
+              >
+                Designs{" "}
+                <FaArrowRight className="size-4 group-hover:translate-x-2 duration-500 ease-in-oute" />
+              </Link>
+              </div>
             </div>
 
             <div className="h-full opacity-30 text-[0.5rem] -rotate-90">
@@ -70,7 +79,7 @@ const Home = () => {
             </div>
 
             {/* designs */}
-            <div className="flex flex-col gap-2 items-end justify-end">
+            {/* <div className="flex flex-col gap-2 items-end justify-end">
               <h2 className="text-3xl text-blue uppercase font-medium text-end">
                 graphic designer
               </h2>
@@ -85,7 +94,7 @@ const Home = () => {
                 Explore designs
                 <FaArrowRight className="group-hover:translate-x-2 duration-500 ease-in-out" />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 

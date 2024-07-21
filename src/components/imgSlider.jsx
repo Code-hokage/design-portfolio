@@ -3,7 +3,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 const Showcase = ( images ) => {
   return (
     <>
-      <div className="">
+      <div className="border border-blue">
         <SimpleImageSlider
           width={160}
           height={120}
