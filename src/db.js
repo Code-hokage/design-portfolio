@@ -227,7 +227,7 @@ export const DesignProjectsItems = [
     url: "imgs/aan-ps.png",
     title: "Professional Growth",
     description:
-      "Lorem, ipsuidem impedit autsit nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga ducimus, expedita obcaecati id, quos accusamus dolore! Asperiores dolore odit repudiandae, vitae ad et eveniet ut molestiae tempora laborum quo explicabo! Quam quasi voluptatum nam.",
+      "Lorem, ipsuidemos nicabo! Quam quasi voluptatum nam.",
     bgStyle: "bg-west",
     // icon: {
     //   Icon: FaGithub,
@@ -259,7 +259,7 @@ export const DesignProjectsItems = [
     url: "imgs/bus01.jpg",
     title: "Networking Opportunities",
     description:
-      "Lorem, ipsuidem impedit autsit nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga ducimus, expedita obcaecati id, quos accusamus dolore! Asperiores dolore odit repudiandae, vitae ad et eveniet ut molestiae tempora laborum quo explicabo! Quam quasi voluptatum nam.",
+      "Lorem, ipsuidem impeditsitLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga.",
     bgStyle: "bg-hero",
     images: [
       { url: "/imgs/aan-ps.png" },

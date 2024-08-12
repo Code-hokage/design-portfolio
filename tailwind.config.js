@@ -41,6 +41,12 @@ module.exports = {
         logoFont: ['"Bebas Neue", "sans-serif"'],
       },
     },
+    
+    screens: {
+      sm: { min: "320px", max: "640px" },
+      md: { min: "641px", max: "1007px" },
+      lg: { min: "1007px" },
+    },
   },
   plugins: [],
 };

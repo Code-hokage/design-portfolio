@@ -49,83 +49,87 @@ const PageContent = (pageItems) => {
     <div className="w-full h-full overflow-hidden">
       <Background bgStyle={currentPageContent.bgStyle} />
 
-      <div className="w-full m-auto flex flex-col justify-center items-center -mt-24 animate__animated animate__fadeInUp animate__slow">
+      <div className="w-full m-auto flex flex-col justify-center items-center -mt-24">
         <div className="w-full *:z-50 px-16 flex justify-between items-start pb-10">
           <div className="w-3/5">
             <Textbox
-            title={currentPageContent.title}
-            description={currentPageContent.description}
-          />
-          {currentPageContent.icon && (
-            <ProjectGithub
-              hrefUrl={currentPageContent.icon.hrefUrl}
-              Icon={currentPageContent.icon.Icon}
-              iconName={currentPageContent.icon.iconName}
-              style={currentPageContent.icon.style}
+              title={currentPageContent.title}
+              description={currentPageContent.description}
             />
-          )}
+            {currentPageContent.icon && (
+              <ProjectGithub
+                hrefUrl={currentPageContent.icon.hrefUrl}
+                Icon={currentPageContent.icon.Icon}
+                iconName={currentPageContent.icon.iconName}
+                style={currentPageContent.icon.style}
+              />
+            )}
           </div>
           <Showcase images={currentPageContent.images} />
         </div>
 
-        <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
-          <button
-            className="flex"
-            onClick={() =>
-              setCurrentIndex(
-                (currentIndex + pageItems.pageContent.length - 1) %
-                  pageItems.pageContent.length
-              )
-            }
-            aria-label="Previous slide"
-          >
-            <span className="text-4xl text-blue opacity-50 hover:opacity-100">{`<`}</span>
-          </button>
+        <div className="w-full animate__animated animate__fadeInUp animate_slower">
+          <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
+            <button
+              className="flex"
+              onClick={() =>
+                setCurrentIndex(
+                  (currentIndex + pageItems.pageContent.length - 1) %
+                    pageItems.pageContent.length
+                )
+              }
+              aria-label="Previous slide"
+            >
+              <span className="text-4xl text-blue opacity-50 hover:opacity-100">{`<`}</span>
+            </button>
 
-          <div
-            className="max-w-[50%] p-4 relative h-32 overflow-x-auto flex items-center no-scrollbar"
-            aria-live="polite"
-            aria-atomic="true"
-            ref={sliderRef}
-            style={{ scrollSnapType: "x mandatory" }}
-          >
-            {pageItems.pageContent.map((image, index) => (
-              <img
-                key={index}
-                src={image.url}
-                alt={`Slide ${index}`}
-                className={`slide rounded w-32 h-24 object-cover mx-3 transition duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
-                  index
-                )}`}
-                data-index={index}
-                // style={{ scrollSnapAlign: "center" }}
-                onClick={() => setCurrentIndex(index)}
-              />
-            ))}
+            <div
+              className="max-w-[50%] p-4 relative h-32 overflow-x-auto flex items-center no-scrollbar"
+              aria-live="polite"
+              aria-atomic="true"
+              ref={sliderRef}
+              style={{ scrollSnapType: "x mandatory" }}
+            >
+              {pageItems.pageContent.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.url}
+                  alt={`Slide ${index}`}
+                  className={`slide rounded w-32 h-24 object-cover mx-3 transition duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
+                    index
+                  )}`}
+                  data-index={index}
+                  // style={{ scrollSnapAlign: "center" }}
+                  onClick={() => setCurrentIndex(index)}
+                />
+              ))}
+            </div>
+
+            <button
+              className="flex"
+              onClick={() =>
+                setCurrentIndex(
+                  (currentIndex + 1) % pageItems.pageContent.length
+                )
+              }
+              aria-label="Next slide"
+            >
+              <span className="text-4xl text-blue opacity-50 hover:opacity-100">{`>`}</span>
+            </button>
           </div>
 
-          <button
-            className="flex"
-            onClick={() =>
-              setCurrentIndex((currentIndex + 1) % pageItems.pageContent.length)
-            }
-            aria-label="Next slide"
-          >
-            <span className="text-4xl text-blue opacity-50 hover:opacity-100">{`>`}</span>
-          </button>
-        </div>
-
-        <div className="flex items-center justify-center px-10 pt-2">
-          {pageItems.pageContent.map((image, index) => (
-            <span
-              key={index}
-              className={`h-3 w-3 mx-1 rounded-full cursor-pointer transition duration-1000 ${
-                currentIndex === index ? "bg-blue" : "bg-blue opacity-30"
-              }`}
-              onClick={() => setCurrentIndex(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            ></span>
-          ))}
+          <div className="flex items-center justify-center px-10 pt-4">
+            {pageItems.pageContent.map((image, index) => (
+              <span
+                key={index}
+                className={`h-3 w-3 mx-1 rounded-full cursor-pointer transition duration-1000 ${
+                  currentIndex === index ? "bg-blue" : "bg-blue opacity-30"
+                }`}
+                onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              ></span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
