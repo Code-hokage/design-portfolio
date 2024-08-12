@@ -2,10 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
+import ProjectGithub from "./projectGithub";
 import PropTypes from "prop-types";
 import "animate.css";
-import { FaGithub } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 
 const PageContent = (pageItems) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,29 +43,29 @@ const PageContent = (pageItems) => {
       : "opacity-50";
   };
 
+  const currentPageContent = pageItems.pageContent[currentIndex];
+
   return (
     <div className="w-full h-full overflow-hidden">
-      <Background bgStyle={pageItems.pageContent[currentIndex].bgStyle} />
+      <Background bgStyle={currentPageContent.bgStyle} />
 
       <div className="w-full m-auto flex flex-col justify-center items-center -mt-24 animate__animated animate__fadeInUp animate__slow">
         <div className="w-full *:z-50 px-16 flex justify-between items-start pb-10">
-          <Textbox
-            title={pageItems.pageContent[currentIndex].title}
-            description={pageItems.pageContent[currentIndex].description}
+          <div className="w-3/5">
+            <Textbox
+            title={currentPageContent.title}
+            description={currentPageContent.description}
           />
-          <Showcase images={pageItems.pageContent[currentIndex].images} />
-          <div>
-            <button className="group relative mt-2">
-              <Link to={pageItems.pageContent[currentIndex].icon.hrefUrl} className="pt-1">
-                <FaGithub
-                  className={`${pageItems.pageContent[currentIndex].icon.iconStyle} text-grey size-8 hover:scale-105 bg-white p-1 rounded-lg duration-500`}
-                />
-              </Link>
-              <span className="absolute text-grey -top-10 left-[50%] -translate-x-[50%] origin-left rounded-lg bg-white p-2 text-xs font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-90 hidden group-hover:flex">
-                {pageItems.pageContent[currentIndex].icon.iconName}
-              </span>
-            </button>
+          {currentPageContent.icon && (
+            <ProjectGithub
+              hrefUrl={currentPageContent.icon.hrefUrl}
+              Icon={currentPageContent.icon.Icon}
+              iconName={currentPageContent.icon.iconName}
+              style={currentPageContent.icon.style}
+            />
+          )}
           </div>
+          <Showcase images={currentPageContent.images} />
         </div>
 
         <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
@@ -116,7 +115,7 @@ const PageContent = (pageItems) => {
           </button>
         </div>
 
-        <div className="flex items-center justify-center px-10 pt-4">
+        <div className="flex items-center justify-center px-10 pt-2">
           {pageItems.pageContent.map((image, index) => (
             <span
               key={index}
@@ -168,11 +167,11 @@ PageContent.defaultProps = {
           Icon: () => null,
           iconName: "default-icon-name",
           hrefUrl: "default-href-url",
-          style: {}
-        }
-      }
-    ]
-  }
+          style: {},
+        },
+      },
+    ],
+  },
 };
 
 export default PageContent;

@@ -229,12 +229,12 @@ export const DesignProjectsItems = [
     description:
       "Lorem, ipsuidem impedit autsit nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga ducimus, expedita obcaecati id, quos accusamus dolore! Asperiores dolore odit repudiandae, vitae ad et eveniet ut molestiae tempora laborum quo explicabo! Quam quasi voluptatum nam.",
     bgStyle: "bg-west",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
+    // icon: {
+    //   Icon: FaGithub,
+    //   hrefUrl: "/",
+    //   iconName: "Github",
+    //   style: "hover:text-grey",
+    // },
     images: [
       { url: "/imgs/west/allcat.png" },
       { url: "/imgs/west/promo.jpg" },
@@ -248,12 +248,6 @@ export const DesignProjectsItems = [
     description:
       "Lorem, ipsuidem impedit autsit nisri id, quos accusamus dolore odit rep.",
     bgStyle: "bg-rabahamallCard",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },
@@ -267,12 +261,6 @@ export const DesignProjectsItems = [
     description:
       "Lorem, ipsuidem impedit autsit nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga ducimus, expedita obcaecati id, quos accusamus dolore! Asperiores dolore odit repudiandae, vitae ad et eveniet ut molestiae tempora laborum quo explicabo! Quam quasi voluptatum nam.",
     bgStyle: "bg-hero",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
     images: [
       { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },

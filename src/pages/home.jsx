@@ -8,14 +8,14 @@ const Home = () => {
     <>
       <main className="relative bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
         {/* profile pic */}
-        <div className="fixed flex items-end justify-end overflow-hidden w-full h-full animate__animated animate__fadeInUp animate__slow">
+        <div className="absolute flex items-end justify-end overflow-hidden w-full h-full animate__animated animate__fadeInUp animate__slow">
           <div className="bg-hero bg-contain bg-no-repeat w-2/3 h-[90%] fixed"></div>
           {/* <img src="/imgs/man.png" alt="man" className="size-max" /> */}
         </div>
 
         <div className="flex w-full h-full pt-40 pb-12 justify-between">
           {/* web dev */}
-          <div className="z-50 flex basis-1/2 h-full flex-col justify-between items-start animate__animated animate__fadeInLeft">
+          <div className="z-50 flex h-full flex-col justify-between items-start animate__animated animate__fadeInLeft">
             <div className="flex flex-col gap-2 items-start">
               <h3 className="text-2xl text-blue">Welcome!</h3>
               <h3 className="text-2xl">I am Adnan Adam a</h3>
@@ -47,7 +47,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="z-50 basis-1/2 text-end flex flex-col items-end justify-between animate__animated animate__fadeInRight ">
+          <div className="z-50 text-end flex flex-col items-end justify-between animate__animated animate__fadeInRight ">
             <div>
               <DateTime />
             </div>
@@ -75,7 +75,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* gradient */}
+        {/* bottom gradient */}
         <div className="w-full h-1/5 absolute bottom-0 bg-gradient-to-t from-darkBlue to-blue/0"></div>
       </main>
     </>
