@@ -166,8 +166,8 @@ PageContent.defaultProps = {
         images: [{ url: "default-image-url" }],
         icon: {
           Icon: () => null,
-          iconName: "",
-          hrefUrl: "",
+          iconName: "default-icon-name",
+          hrefUrl: "default-href-url",
           style: {}
         }
       }

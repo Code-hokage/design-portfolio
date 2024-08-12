@@ -1,53 +1,55 @@
-import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { Socials } from "../db";
 import DateTime from "../components/dateTime";
-import 'animate.css';
+import "animate.css";
 
 const Home = () => {
   return (
     <>
       <main className="relative bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
         {/* profile pic */}
-        <div className="fixed overflow-hidden w-1/2 h-full animate__animated animate__fadeInUp animate__slow">
-          <div className="bg-hero bg-contain bg-no-repeat w-full h-full fixed"></div>
+        <div className="fixed flex items-end justify-end overflow-hidden w-full h-full animate__animated animate__fadeInUp animate__slow">
+          <div className="bg-hero bg-contain bg-no-repeat w-2/3 h-[90%] fixed"></div>
           {/* <img src="/imgs/man.png" alt="man" className="size-max" /> */}
         </div>
 
         <div className="flex w-full h-full pt-40 pb-12 justify-between">
           {/* web dev */}
-          <div className="z-50 flex basis-1/2 flex-col justify-between items-start animate__animated animate__fadeInLeft">
+          <div className="z-50 flex basis-1/2 h-full flex-col justify-between items-start animate__animated animate__fadeInLeft">
             <div className="flex flex-col gap-2 items-start">
               <h3 className="text-2xl text-blue">Welcome!</h3>
               <h3 className="text-2xl">I am Adnan Adam a</h3>
               <h2 className="text-4xl font-medium text-blue uppercase">
-                <span>frontend developer</span> <br /><span className="text-[crimson]">+</span><span>designer</span>
+                <span>frontend developer</span> <br />
+                <span className="text-[crimson]">+</span>
+                <span>designer</span>
               </h2>
-              <p>
-                I create exceptional user friendly experiences. <br /> Here are
-                some of my personal projects. <br /> Explore and get a sense of
+              <p className="pt-8">
+                I create exceptional user friendly experiences <br />
+                and exceptional designs. Explore and get a sense <br /> of
                 technical capabilities <br /> and design aesthetics.
               </p>
-              <div className="flex items-center gap-4">
-                <Link
-                to="/webprojects"
-                className="text-blue flex justify-center items-center gap-2 group text-base"
-              >
-                Web projects{" "}
-                <FaArrowRight className="size-4 group-hover:translate-x-2 duration-500 ease-in-oute" />
-              </Link>
-              <Link
-                to="/designs"
-                className="text-blue flex justify-center items-center gap-2 group text-base"
-              >
-                Designs{" "}
-                <FaArrowRight className="size-4 group-hover:translate-x-2 duration-500 ease-in-oute" />
-              </Link>
-              </div>
+
+              {/* <div className="flex items-center gap-4">
+                <button class="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-8 w-40 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">
+                  <div class="absolute z-10 w-48 h-48 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-900 delay-150 group-hover:delay-75"></div>
+                  <div class="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-800 delay-150 group-hover:delay-100"></div>
+                  <div class="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-700 delay-150 group-hover:delay-150"></div>
+                  <div class="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-600 delay-150 group-hover:delay-200"></div>
+                  <div class="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-500 delay-150 group-hover:delay-300"></div>
+                  <p class="z-10">Discover More</p>
+                </button>
+              </div> */}
             </div>
 
-            <div className="h-full opacity-30 text-[0.5rem] -rotate-90">
-              copyright © 2024
+            <div className="opacity-30 text-[0.5rem]">
+              <span>copyright © 2024</span>
+            </div>
+          </div>
+
+          <div className="z-50 basis-1/2 text-end flex flex-col items-end justify-between animate__animated animate__fadeInRight ">
+            <div>
+              <DateTime />
             </div>
 
             <nav aria-label="socials" className="z-50 flex gap-3">
@@ -70,31 +72,6 @@ const Home = () => {
                 );
               })}
             </nav>
-          </div>
-
-          <div className="z-50 basis-1/2 text-end flex flex-col items-end justify-between animate__animated animate__fadeInRight ">
-            {/* dateTime */}
-            <div>
-              <DateTime />
-            </div>
-
-            {/* designs */}
-            {/* <div className="flex flex-col gap-2 items-end justify-end">
-              <h2 className="text-3xl text-blue uppercase font-medium text-end">
-                graphic designer
-              </h2>
-              <p>
-                I create exceptional and beautiful designs.
-                <br /> Explore and get a sense of my design aesthetics.
-              </p>
-              <Link
-                to="/designs"
-                className="text-blue flex justify-end items-center gap-2 group"
-              >
-                Explore designs
-                <FaArrowRight className="group-hover:translate-x-2 duration-500 ease-in-out" />
-              </Link>
-            </div> */}
           </div>
         </div>
 
