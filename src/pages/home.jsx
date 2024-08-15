@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Socials } from "../db";
 import DateTime from "../components/dateTime";
+import { FaArrowRight } from "react-icons/fa6";
 import "animate.css";
 
 const Home = () => {
@@ -24,14 +25,20 @@ const Home = () => {
                 <span className="text-[crimson]">+</span>
                 <span>designer</span>
               </h2>
-              <p className="pt-8">
+              <p className="py-2">
                 I create exceptional user friendly experiences <br />
                 and exceptional designs. Explore and get a sense <br /> of
                 technical capabilities and design aesthetics.
               </p>
 
-              <div className="flex items-center gap-4">
-               
+              <div className="flex items-center">
+                <Link to="/" className="overflow-hidden text-center px-4 py-2 bg-blue text-darkBlue border-none rounded-md text-base font-bold cursor-pointer relative z-10 group">
+                  <span className="group-hover:text-blue mr-2">Explore!</span>
+                  <FaArrowRight className="text-darkBlue inline group-hover:text-blue group-hover:translate-x-2 transition-transform duration-500" />
+                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-darkBlue/70 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-darkBlue rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                </Link>
               </div>
             </div>
 

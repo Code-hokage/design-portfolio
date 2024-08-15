@@ -94,7 +94,7 @@ const PageContent = (pageItems) => {
                   key={index}
                   src={image.url}
                   alt={`Slide ${index}`}
-                  className={`slide rounded w-32 h-24 object-cover transition-all duration-1000 cursor-pointer slide-${index} ${getSlideStyle(
+                  className={`slide rounded w-32 h-24 object-cover transition-all duration-500 cursor-pointer slide-${index} ${getSlideStyle(
                     index
                   )}`}
                   data-index={index}
