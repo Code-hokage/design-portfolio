@@ -65,14 +65,12 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/1",
       iconName: "Github",
       style: "hover:text-grey",
     },
     images: [
       { url: "/imgs/aan-ps.png" },
-      { url: "/imgs/caspa-ai.png" },
-      { url: "/imgs/hancho-ps.png" },
     ],
   },
   {
@@ -83,13 +81,11 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/2",
       iconName: "Github",
       style: "hover:text-grey",
     },
     images: [
-      { url: "/imgs/aan-ps.png" },
-      { url: "/imgs/caspa-ai.png" },
       { url: "/imgs/hancho-ps.png" },
     ],
   },
@@ -101,14 +97,12 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/3",
       iconName: "Github",
       style: "hover:text-grey",
     },
     images: [
-      { url: "/imgs/aan-ps.png" },
       { url: "/imgs/caspa-ai.png" },
-      { url: "/imgs/hancho-ps.png" },
     ],
   },
   {
@@ -119,7 +113,7 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/4",
       iconName: "Github",
       style: "hover:text-grey",
     },
@@ -137,7 +131,7 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/5",
       iconName: "Github",
       style: "hover:text-grey",
     },
@@ -155,7 +149,7 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/6",
       iconName: "Github",
       style: "hover:text-grey",
     },
@@ -173,7 +167,7 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/7",
       iconName: "Github",
       style: "hover:text-grey",
     },
@@ -191,7 +185,7 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/8",
       iconName: "Github",
       style: "hover:text-grey",
     },
@@ -209,7 +203,7 @@ export const WebProjectsItems = [
     bgStyle: "bg-rabahamallCard",
     icon: {
       Icon: FaGithub,
-      hrefUrl: "/",
+      hrefUrl: "/9",
       iconName: "Github",
       style: "hover:text-grey",
     },

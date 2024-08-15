@@ -3,7 +3,6 @@ import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
 import ProjectGithub from "./projectGithub";
-import PropTypes from "prop-types";
 import "animate.css";
 
 const PageContent = (pageItems) => {
@@ -31,7 +30,7 @@ const PageContent = (pageItems) => {
         // Remove the smooth scrolling class after the transition
         setTimeout(() => {
           sliderRef.current.classList.remove("scroll-smooth");
-        }, 2000); // match the duration of your transition
+        }, 1000); // match the duration of your transition
       }
     }
   }, [currentIndex]);
@@ -40,7 +39,7 @@ const PageContent = (pageItems) => {
   const getSlideStyle = (index) => {
     return index === currentIndex
       ? "opacity-100 border border-blue z-10 transform scale-125"
-      : "opacity-50";
+      : "opacity-30 scale-90";
   };
 
   const currentPageContent = pageItems.pageContent[currentIndex];
@@ -68,7 +67,7 @@ const PageContent = (pageItems) => {
           <Showcase images={currentPageContent.images} />
         </div>
 
-        <div className="w-full animate__animated animate__fadeInUp animate_slower">
+        <div className="w-full animate__animated animate__fadeInUp animate__slower">
           <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
             <button
               className="flex"
@@ -95,7 +94,7 @@ const PageContent = (pageItems) => {
                   key={index}
                   src={image.url}
                   alt={`Slide ${index}`}
-                  className={`slide rounded w-32 h-24 object-cover mx-3 transition duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
+                  className={`slide rounded w-32 h-24 object-cover mx-3 transition-all duration-1000 cursor-pointer slide-${index} ${getSlideStyle(
                     index
                   )}`}
                   data-index={index}
@@ -134,48 +133,6 @@ const PageContent = (pageItems) => {
       </div>
     </div>
   );
-};
-
-PageContent.propTypes = {
-  pageItems: PropTypes.shape({
-    pageContent: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        bgStyle: PropTypes.string.isRequired,
-        images: PropTypes.arrayOf(
-          PropTypes.shape({
-            url: PropTypes.string.isRequired,
-          })
-        ).isRequired,
-        icon: PropTypes.shape({
-          iconName: PropTypes.string.isRequired,
-          hrefUrl: PropTypes.string.isRequired,
-          style: PropTypes.object,
-        }).isRequired,
-      })
-    ).isRequired,
-  }).isRequired,
-};
-
-// Define default props
-PageContent.defaultProps = {
-  pageItems: {
-    pageContent: [
-      {
-        title: "Default Title",
-        description: "Default Description",
-        bgStyle: "default-bg-style",
-        images: [{ url: "default-image-url" }],
-        icon: {
-          Icon: () => null,
-          iconName: "default-icon-name",
-          hrefUrl: "default-href-url",
-          style: {},
-        },
-      },
-    ],
-  },
 };
 
 export default PageContent;

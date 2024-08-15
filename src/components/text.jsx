@@ -30,11 +30,11 @@ const Textbox = ({ title, description }) => {
   }, [description, currentDescription]);
 
   return (
-    <div className="text-start max-h-32 overflow-y-auto animate__animated animate__fadeInLeft">
+    <div className="text-start overflow-y-auto animate__animated animate__fadeInLeft animate__slow">
       {currentTitle && (
         <h2
-          className={`text-3xl text-blue font-medium uppercase transition-opacity duration-500 ${
-            transitioning ? "opacity-0" : "opacity-100"
+          className={`text-4xl text-blue font-medium uppercase transition-all ${
+            transitioning ? "opacity-0 duration-0 -translate-x-4" : "opacity-100 origin-left duration-500 translate-x-0"
           }`}
         >
           {currentTitle}
@@ -42,8 +42,8 @@ const Textbox = ({ title, description }) => {
       )}
       {currentDescription && (
         <p
-          className={`py-2 transition-opacity duration-500 ${
-            transitioning ? "opacity-0" : "opacity-100"
+          className={`py-2 transition-all ${
+            transitioning ? "opacity-0 -translate-x-4 duration-0" : "opacity-100 translate-x-0 duration-500"
           }`}
         >
           {currentDescription}
