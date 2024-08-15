@@ -33,7 +33,7 @@ const Textbox = ({ title, description }) => {
     <div className="text-start overflow-y-auto animate__animated animate__fadeInLeft animate__slow">
       {currentTitle && (
         <h2
-          className={`text-4xl text-blue font-medium uppercase transition-all ${
+          className={`text-5xl font-bold text-blue uppercase transition-all ${
             transitioning ? "opacity-0 duration-0 -translate-x-4" : "opacity-100 origin-left duration-500 translate-x-0"
           }`}
         >

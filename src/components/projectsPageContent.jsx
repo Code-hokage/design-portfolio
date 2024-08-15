@@ -38,7 +38,7 @@ const PageContent = (pageItems) => {
   // Define styles for the active and non-active images
   const getSlideStyle = (index) => {
     return index === currentIndex
-      ? "opacity-100 border border-blue z-10 transform scale-125"
+      ? "opacity-100 border border-blue mx-8 z-10 transform scale-125 transition-all duration-500"
       : "opacity-30 scale-90";
   };
 
@@ -94,7 +94,7 @@ const PageContent = (pageItems) => {
                   key={index}
                   src={image.url}
                   alt={`Slide ${index}`}
-                  className={`slide rounded w-32 h-24 object-cover mx-3 transition-all duration-1000 cursor-pointer slide-${index} ${getSlideStyle(
+                  className={`slide rounded w-32 h-24 object-cover transition-all duration-1000 cursor-pointer slide-${index} ${getSlideStyle(
                     index
                   )}`}
                   data-index={index}

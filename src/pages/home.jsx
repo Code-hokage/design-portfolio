@@ -6,9 +6,9 @@ import "animate.css";
 const Home = () => {
   return (
     <>
-      <main className="relative bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
+      <main className="relative overflow-hidden bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
         {/* profile pic */}
-        <div className="absolute flex items-end justify-end overflow-hidden w-full h-full animate__animated animate__fadeInUp animate__slow">
+        <div className="absolute flex items-end justify-end overflow-hidden w-full h-full animate__animated animate__fadeInUp">
           <div className="bg-hero bg-contain bg-no-repeat w-2/3 h-[90%] fixed"></div>
           {/* <img src="/imgs/man.png" alt="man" className="size-max" /> */}
         </div>
@@ -27,19 +27,12 @@ const Home = () => {
               <p className="pt-8">
                 I create exceptional user friendly experiences <br />
                 and exceptional designs. Explore and get a sense <br /> of
-                technical capabilities <br /> and design aesthetics.
+                technical capabilities and design aesthetics.
               </p>
 
-              {/* <div className="flex items-center gap-4">
-                <button class="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-8 w-40 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">
-                  <div class="absolute z-10 w-48 h-48 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-900 delay-150 group-hover:delay-75"></div>
-                  <div class="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-800 delay-150 group-hover:delay-100"></div>
-                  <div class="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-700 delay-150 group-hover:delay-150"></div>
-                  <div class="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-600 delay-150 group-hover:delay-200"></div>
-                  <div class="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-500 delay-150 group-hover:delay-300"></div>
-                  <p class="z-10">Discover More</p>
-                </button>
-              </div> */}
+              <div className="flex items-center gap-4">
+               
+              </div>
             </div>
 
             <div className="opacity-30 text-[0.5rem]">

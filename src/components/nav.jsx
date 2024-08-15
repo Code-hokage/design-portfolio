@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import 'animate.css';
 
 const Navbar = () => {
-  const activeLink = "text-blue text-base border-b border-blue";
+  const activeLink = "text-blue text-base transition-all duration-700 ";
 
   return (
     <>
@@ -18,17 +18,16 @@ const Navbar = () => {
 
         <div className=" flex justify-end items-center">
           <nav className="flex justify-center items-center gap-3">
-            <ul className="flex *:px-2 justify-center">
+            <ul className="flex *:px-4 justify-center">
               {NavLinks.map((link) => {
                 return (
                   <NavLink
                     key={link.path}
                     to={link.path}
-                    className={({ isActive }) =>
-                      isActive
-                        ? activeLink
-                        : "text-base hover:text-blue hover:scale-105 mx-2 transition duration-700"
-                    }
+                    className={({ isActive }) => {
+                      return isActive ? activeLink : "text-base hover:text-blue/60";
+                      }}
+                    // className={`text-base hover:text-blue hover:scale-105 mx-2 border-b-2 border-blue/0 ${active ? activeLink : ""}`}
                   >
                     {link.Name}
                   </NavLink>
@@ -37,7 +36,7 @@ const Navbar = () => {
             </ul>
 
             <Link to="/contact" className="flex items-center justify-center cursor-pointer">
-              <div className="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold shadow text-blue transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 bg-grey group">
+              <div className="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold shadow transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 bg-grey group">
                 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-blue group-hover:h-full"></span>
                 <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                   <FaArrowRight />

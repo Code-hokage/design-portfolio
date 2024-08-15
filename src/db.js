@@ -13,7 +13,6 @@ export const NavLinks = [
   {
     Name: "Web Projects",
     path: "/webprojects",
-    clicked: false,
   },
   {
     Name: "Designs",

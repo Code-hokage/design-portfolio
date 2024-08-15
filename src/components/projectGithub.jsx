@@ -23,11 +23,11 @@ const ProjectGithub = ({ hrefUrl, Icon, style, iconName }) => {
     <>
       <div className="animate__animated animate__fadeInLeft animate__slow cursor-pointer">
         <div
-          className={`flex transition-all ${
+          className={`w-fit transition-all ${
             transitioning ? "opacity-0 -translate-x-4 duration-0" : "opacity-100 translate-x-0 origin-left duration-500"
           }`}
         >
-          <div className={`relative mt-2 group`}>
+          <div className={`relative group`}>
             <Link to={currentHref} aria-label={iconName}>
               <button
                 className={`text-grey bg-white p-1 rounded-lg transition-transform duration-500 hover:scale-105 ${style}`}
@@ -36,7 +36,7 @@ const ProjectGithub = ({ hrefUrl, Icon, style, iconName }) => {
               </button>
             </Link>
             <div
-              className="absolute group-hover:flex top-0 left-7 transform group-hover:origin- group-hover:translate-x-4 opacity-0 group-hover:opacity-100 rounded-lg bg-white p-1 text-xs font-bold text-grey shadow-md transition-all duration-500 ease-in-out"
+              className="absolute group-hover:flex top-0 left-7 transform group-hover:translate-x-4 opacity-0 group-hover:opacity-100 rounded-md bg-white p-1 text-xs font-bold text-grey shadow-md transition-all duration-500 ease-in-out"
               role="tooltip"
             >
               {iconName}
