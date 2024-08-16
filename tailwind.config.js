@@ -39,6 +39,7 @@ module.exports = {
       },
       fontFamily: {
         logoFont: ['"Bebas Neue", "sans-serif"'],
+        titleFont: ['"Nosifer", "sans-serif"'],
       },
     },
     

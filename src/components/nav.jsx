@@ -2,6 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import { NavLinks } from "../db";
 import { FaArrowRight } from "react-icons/fa";
 import 'animate.css';
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const activeLink = "text-blue text-base transition-all duration-700 ";
@@ -35,6 +36,12 @@ const Navbar = () => {
               })}
             </ul>
 
+            <motion.div
+                className="box z-10"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 500, damping: 17 }}
+              >
             <Link to="/contact" className="flex items-center justify-center cursor-pointer">
               <div className="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold shadow transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 bg-grey group">
                 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-blue group-hover:h-full"></span>
@@ -49,6 +56,7 @@ const Navbar = () => {
                 </span>
               </div>
             </Link>
+            </motion.div>
 
             {/* mobile nav */}
             {/* <label class="flex flex-col gap-2 w-8">

@@ -3,6 +3,7 @@ import { Socials } from "../db";
 import DateTime from "../components/dateTime";
 import { FaArrowRight } from "react-icons/fa6";
 import "animate.css";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -17,33 +18,45 @@ const Home = () => {
         <div className="flex w-full h-full pt-40 pb-12 justify-between">
           {/* web dev */}
           <div className="z-50 flex h-full flex-col justify-between items-start animate__animated animate__fadeInLeft">
-            <div className="flex flex-col gap-2 items-start">
+            <div className="flex flex-col gap- items-start">
               <h3 className="text-2xl text-blue">Welcome!</h3>
               <h3 className="text-2xl">I am Adnan Adam a</h3>
-              <h2 className="text-4xl font-medium text-blue uppercase">
+              <div className="text-3xl py-4 font-titleFont text-blue uppercase">
                 <span>frontend developer</span> <br />
                 <span className="text-[crimson]">+</span>
-                <span>designer</span>
-              </h2>
-              <p className="py-2">
+                <span className="text-2xl">designer </span>
+                <span className="text-[crimson]">+</span>
+                <span className="text-2xl">code-kage</span>
+              </div>
+              <p className="py-4">
                 I create exceptional user friendly experiences <br />
                 and exceptional designs. Explore and get a sense <br /> of
                 technical capabilities and design aesthetics.
               </p>
 
-              <div className="flex items-center">
-                <Link to="/" className="overflow-hidden text-center px-4 py-2 bg-blue text-darkBlue border-none rounded-md text-base font-bold cursor-pointer relative z-10 group">
-                  <span className="group-hover:text-blue mr-2">Explore!</span>
-                  <FaArrowRight className="text-darkBlue inline group-hover:text-blue group-hover:translate-x-2 transition-transform duration-500" />
-                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
-                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-darkBlue/70 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
-                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-darkBlue rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
-                </Link>
-              </div>
+              <motion.div
+                className="box z-10"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 500, damping: 17 }}
+              >
+                <div className="flex items-center">
+                  <Link
+                    to="/"
+                    className="overflow-hidden relative text-center px-4 py-2 bg-blue text-darkBlue border border-blue rounded-md text-base font-bold cursor-pointer z-10 group"
+                  >
+                    <span className="group-hover:text-blue mr-2">Explore!</span>
+                    <FaArrowRight className="text-darkBlue inline group-hover:text-blue group-hover:translate-x-2 transition-transform duration-500" />
+                    <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                    <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-grey/90 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                    <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-grey rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                  </Link>
+                </div>
+              </motion.div>
             </div>
 
             <div className="opacity-30 text-[0.5rem]">
-              <span>copyright © 2024</span>
+              <span>created by Adnan | copyright © 2024</span>
             </div>
           </div>
 
