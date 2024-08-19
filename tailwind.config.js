@@ -13,7 +13,8 @@ module.exports = {
         shadowButtom: "0px 8px 8px rgba(0, 0, 0, 40%)",
       },
       backgroundImage: {
-        hero: "url('/public/imgs/man.png')",
+        hero: "url('/public/man.png')",
+        ibg: "url('/public/imgs/ihatins/ibg.jpg')",
         rabahamallCard: "url('/public/imgs/rabahamallCard.png')",
         west: "url('/public/imgs/west/westBrandboard.png')",
       },
@@ -39,7 +40,8 @@ module.exports = {
       },
       fontFamily: {
         logoFont: ['"Bebas Neue", "sans-serif"'],
-        titleFont: ['"Nosifer", "sans-serif"'],
+        title: ['"Nosifer", "sans-serif"'],
+        projectsTitle: ['"Philosopher", "sans-serif"'],
       },
     },
     

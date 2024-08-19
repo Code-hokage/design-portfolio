@@ -38,7 +38,7 @@ const PageContent = (pageItems) => {
   // Define styles for the active and non-active images
   const getSlideStyle = (index) => {
     return index === currentIndex
-      ? "opacity-100 border border-blue mx-8 z-10 transform scale-125 transition-all duration-500"
+      ? "opacity-100 border-2 border-blue mx-8 z-10 transform scale-125 transition-all duration-500"
       : "opacity-30 scale-90";
   };
 
@@ -121,7 +121,7 @@ const PageContent = (pageItems) => {
             {pageItems.pageContent.map((image, index) => (
               <span
                 key={index}
-                className={`h-3 w-3 mx-1 rounded-full cursor-pointer transition duration-1000 ${
+                className={`h-2 w-2 mx-1 rounded-full cursor-pointer transition duration-1000 ${
                   currentIndex === index ? "bg-blue" : "bg-blue opacity-30"
                 }`}
                 onClick={() => setCurrentIndex(index)}

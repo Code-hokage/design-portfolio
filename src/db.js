@@ -58,7 +58,7 @@ export const Socials = [
 export const WebProjectsItems = [
   {
     id: "1",
-    url: "imgs/aan-ps.png",
+    url: "imgs/ihatins/ihat5.png",
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-rabahamallCard",
@@ -140,88 +140,19 @@ export const WebProjectsItems = [
       { url: "/imgs/hancho-ps.png" },
     ],
   },
-  {
-    id: "6",
-    url: "imgs/hancho-ps.png",
-    title: "Networking Opportunities",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgStyle: "bg-rabahamallCard",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/6",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
-    images: [
-      { url: "/imgs/aan-ps.png" },
-      { url: "/imgs/caspa-ai.png" },
-      { url: "/imgs/hancho-ps.png" },
-    ],
-  },
-  {
-    id: "7",
-    url: "imgs/mine/akagami-01.jpg",
-    title: "Professional Growth",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgStyle: "bg-rabahamallCard",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/7",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
-    images: [
-      { url: "/imgs/aan-ps.png" },
-      { url: "/imgs/caspa-ai.png" },
-      { url: "/imgs/hancho-ps.png" },
-    ],
-  },
-  {
-    id: "8",
-    url: "imgs/mine/luffyai.png",
-    title: "Strategic Planning",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgStyle: "bg-rabahamallCard",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/8",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
-    images: [
-      { url: "/imgs/aan-ps.png" },
-      { url: "/imgs/caspa-ai.png" },
-      { url: "/imgs/hancho-ps.png" },
-    ],
-  },
-  {
-    id: "9",
-    url: "imgs/mine/Straw_hat-01.png",
-    title: "Networking Opportunities",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgStyle: "bg-rabahamallCard",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/9",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
-    images: [
-      { url: "/imgs/aan-ps.png" },
-      { url: "/imgs/caspa-ai.png" },
-      { url: "/imgs/hancho-ps.png" },
-    ],
-  },
 ];
+
+
+// Design projects
 
 export const DesignProjectsItems = [
   {
     id: "1",
-    url: "imgs/aan-ps.png",
-    title: "Professional Growth",
+    url: "imgs/ihatins/ihatins-01.jpg",
+    title: "iHATINS",
     description:
       "Lorem, ipsuidemos nicabo! Quam quasi voluptatum nam.",
-    bgStyle: "bg-west",
+    bgStyle: "bg-ibg",
     // icon: {
     //   Icon: FaGithub,
     //   hrefUrl: "/",
@@ -229,14 +160,18 @@ export const DesignProjectsItems = [
     //   style: "hover:text-grey",
     // },
     images: [
-      { url: "/imgs/west/allcat.png" },
-      { url: "/imgs/west/promo.jpg" },
-      { url: "/imgs/west/ps02.png" },
+      { url: "/imgs/ihatins/ibrand.png" },
+      { url: "/imgs/ihatins/iflashsale.jpg" },
+      { url: "/imgs/ihatins/ipromo.jpg" },
+      { url: "/imgs/ihatins/ipromo01.png" },
+      { url: "/imgs/ihatins/ips01.png" },
+      { url: "/imgs/ihatins/ips02.png" },
+      { url: "/imgs/ihatins/ips03.png" },
     ],
   },
   {
     id: "2",
-    url: "imgs/bus-ps.png",
+    url: "imgs/wed/",
     title: "Strategic Planning",
     description:
       "Lorem, ipsuidem impedit autsit nisri id, quos accusamus dolore odit rep.",
@@ -252,7 +187,33 @@ export const DesignProjectsItems = [
     url: "imgs/bus01.jpg",
     title: "Networking Opportunities",
     description:
-      "Lorem, ipsuidem impeditsitLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut in eos modi ipsa harum dolores unde reiciendis nesciunt sed, commodi fuga.",
+      "Lorem, ipsuidem impeditsitLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus a",
+    bgStyle: "bg-hero",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
+  },
+  {
+    id: "4",
+    url: "imgs/bus01.jpg",
+    title: "Networking Opportunities",
+    description:
+      "Lorem, ipsuidem impeditsitLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus au",
+    bgStyle: "bg-hero",
+    images: [
+      { url: "/imgs/aan-ps.png" },
+      { url: "/imgs/caspa-ai.png" },
+      { url: "/imgs/hancho-ps.png" },
+    ],
+  },
+  {
+    id: "5",
+    url: "imgs/bus01.jpg",
+    title: "Networking Opportunities",
+    description:
+      "Lorem, ipsuidem impeditsitLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt non doloremque natus aut",
     bgStyle: "bg-hero",
     images: [
       { url: "/imgs/aan-ps.png" },
