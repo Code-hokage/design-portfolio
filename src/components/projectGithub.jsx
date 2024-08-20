@@ -21,9 +21,8 @@ const ProjectGithub = ({ hrefUrl, Icon, style, iconName }) => {
 
   return (
     <>
-      <div className="animate__animated animate__fadeInLeft animate__slow cursor-pointer">
         <div
-          className={`w-fit transition-all ${
+          className={`w-fit transition-all cursor-pointer ${
             transitioning ? "opacity-0 -translate-x-4 duration-0" : "opacity-100 translate-x-0 origin-left duration-500"
           }`}
         >
@@ -43,7 +42,6 @@ const ProjectGithub = ({ hrefUrl, Icon, style, iconName }) => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

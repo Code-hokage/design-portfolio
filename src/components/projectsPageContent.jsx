@@ -49,7 +49,7 @@ const PageContent = (pageItems) => {
       <Background bgStyle={currentPageContent.bgStyle} />
 
       <div className="w-full m-auto flex flex-col justify-center items-center -mt-24">
-        <div className="w-full *:z-50 px-16 flex justify-between items-start pb-10">
+        <div className="w-full *:z-50 px-32 flex justify-between items-start pb-10">
           <div className="w-3/5">
             <Textbox
               title={currentPageContent.title}
@@ -67,7 +67,7 @@ const PageContent = (pageItems) => {
           <Showcase images={currentPageContent.images} />
         </div>
 
-        <div className="w-full animate__animated animate__fadeInUp animate__slower">
+        <div className="w-full">
           <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
             <button
               className="flex"

@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nosifer&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 
 * {
   padding: 0;
@@ -25,7 +22,7 @@ body {
   letter-spacing: 1px;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
-  font-size: 0.9rem;
+  font-size: 1rem;
   background: #04091e;
   color: #fff;
 }

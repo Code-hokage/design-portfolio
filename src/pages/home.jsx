@@ -2,26 +2,54 @@ import { Link } from "react-router-dom";
 import { Socials } from "../db";
 import DateTime from "../components/dateTime";
 import { FaArrowRight } from "react-icons/fa6";
-import "animate.css";
 import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: "-100vh",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", delay: 0.6, stiffness: 120 },
+  },
+  exit: {
+    y: "-100vh",
+    transition: { ease: "easeInOut" },
+  },
+};
+
+const buttonVariants = {
+  hover: {
+    scale: 1.08,
+  },
+  tap: {
+    scale: 0.9,
+  },
+  transition: { type: "spring", duration: 0.3, stiffness: 500, damping: 17 },
+};
 
 const Home = () => {
   return (
     <>
-      <main className="relative overflow-hidden bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/30 via-grey to-darkBlue w-screen h-screen flex justify-center items-center px-16">
+      <motion.main
+        className="relative overflow-hidden bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue/20 via-darkBlue/70 to-darkBlue w-screen h-screen flex justify-center items-center px-16"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {/* profile pic */}
-        <div className="absolute flex items-end justify-end overflow-hidden w-full h-full animate__animated animate__fadeInUp">
-          <div className="bg-hero bg-contain bg-no-repeat w-2/3 h-[90%] fixed"></div>
-          {/* <img src="/imgs/man.png" alt="man" className="size-max" /> */}
+        <div className="absolute left-16 flex items-end justify-end overflow-hidden w-full h-full">
+          <div className="bg-hero bg-contain bg-no-repeat w-[60rem] h-[36rem] fixed"></div>
         </div>
 
         <div className="flex w-full h-full pt-40 pb-12 justify-between">
           {/* web dev */}
-          <div className="z-50 flex h-full flex-col justify-between items-start animate__animated animate__fadeInLeft">
+          <div className="z-50 flex h-full flex-col justify-between items-start">
             <div className="flex flex-col gap- items-start">
-              <h3 className="text-2xl text-blue">Welcome!</h3>
-              <h3 className="text-2xl">I am Adnan Adam a</h3>
-              <div className="text-3xl py-4 font-titleFont text-blue uppercase">
+              <h3 className="text-2xl">Adnan Adam</h3>
+              <div className="text-3xl font-semibold py-4 font-titleFont text-blue uppercase">
                 <span>frontend developer</span> <br />
                 <span className="text-[crimson]">+</span>
                 <span className="text-2xl">designer </span>
@@ -30,45 +58,40 @@ const Home = () => {
               </div>
               <p className="py-4">
                 I create exceptional user friendly experiences <br />
-                and exceptional designs. Explore and get a sense <br /> of
+                and exceptional designs. Explore and get a sense <br /> of my
                 technical capabilities and design aesthetics.
               </p>
 
               <motion.div
-                className="box z-10"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 500, damping: 17 }}
+                className="flex items-center"
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
               >
-                <div className="flex items-center">
-                  <Link
-                    to="/"
-                    className="overflow-hidden relative text-center px-4 py-2 bg-blue text-darkBlue border border-blue rounded-md text-base font-bold cursor-pointer z-10 group"
-                  >
-                    <span className="group-hover:text-blue mr-2">Explore!</span>
-                    <FaArrowRight className="text-darkBlue inline group-hover:text-blue group-hover:translate-x-2 transition-transform duration-500" />
-                    <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
-                    <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-grey/90 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
-                    <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-grey rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
-                  </Link>
-                </div>
+                <Link
+                  to="/"
+                  className="overflow-hidden relative text-center px-4 py-2 bg-grey text-blue border border-blue rounded-md text-base font-bold cursor-pointer z-10 group"
+                >
+                  <span className="group-hover:text-darkBlue mr-2">
+                    Explore!
+                  </span>
+                  <FaArrowRight className="text-blue inline group-hover:text-darkBlue group-hover:translate-x-2 transition-transform duration-500" />
+                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-grey rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                  <span className="absolute w-36 h-32 -top-8 -left-2 -z-10 bg-blue rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                </Link>
               </motion.div>
-            </div>
-
-            <div className="opacity-30 text-[0.5rem]">
-              <span>created by Adnan | copyright © 2024</span>
-            </div>
-          </div>
-
-          <div className="z-50 text-end flex flex-col items-end justify-between animate__animated animate__fadeInRight ">
-            <div>
-              <DateTime />
             </div>
 
             <nav aria-label="socials" className="z-50 flex gap-3">
               {Socials.map((social) => {
                 return (
-                  <button className="group relative">
+                  <motion.button
+                    className="group relative"
+                    variants={buttonVariants}
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
                     <Link
                       key={social.hrefUrl}
                       to={social.hrefUrl}
@@ -78,19 +101,31 @@ const Home = () => {
                         className={`${social.style} text-blue size-8 hover:scale-105 hover:bg-white p-1 rounded-lg duration-500`}
                       />
                     </Link>
-                    <span className="absolute text-grey -top-10 left-[50%] -translate-x-[50%] scale-0 origin-bottom rounded-lg bg-white p-2 text-xs font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:flex">
+                    <span
+                      className={`${social.nameStyle} absolute -top-10 left-[50%] -translate-x-[50%] scale-0 origin-bottom rounded-lg bg-white p-2 text-xs font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:flex`}
+                    >
                       {social.Name}
                     </span>
-                  </button>
+                  </motion.button>
                 );
               })}
             </nav>
           </div>
+
+          <div className="z-50 text-end flex flex-col items-end justify-between">
+            <div>
+              <DateTime />
+            </div>
+
+            <div className="opacity-30 text-[0.5rem]">
+              <span>created by Adnan | copyright © 2024</span>
+            </div>
+          </div>
         </div>
 
         {/* bottom gradient */}
-        <div className="w-full h-1/5 absolute bottom-0 bg-gradient-to-t from-darkBlue to-blue/0"></div>
-      </main>
+        <div className="w-full h-2/5 absolute bottom-0 bg-gradient-to-t from-darkBlue to-blue/0"></div>
+      </motion.main>
     </>
   );
 };
