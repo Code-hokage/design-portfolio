@@ -121,8 +121,8 @@ const PageContent = (pageItems) => {
             {pageItems.pageContent.map((image, index) => (
               <span
                 key={index}
-                className={`h-2 w-2 mx-1 rounded-full cursor-pointer transition duration-1000 ${
-                  currentIndex === index ? "bg-blue" : "bg-blue opacity-30"
+                className={`mx-1 rounded-[50%] h-4 w-4 border-2 border-blue cursor-pointer ${
+                  currentIndex === index ? "bg-blue transform w-10 transition duration-500" : ""
                 }`}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
