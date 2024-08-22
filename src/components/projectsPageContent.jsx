@@ -4,6 +4,8 @@ import Background from "./background";
 import Showcase from "./imgSlider";
 import ProjectGithub from "./projectGithub";
 import "animate.css";
+import { motion } from "framer-motion";
+
 
 const PageContent = (pageItems) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -121,8 +123,10 @@ const PageContent = (pageItems) => {
             {pageItems.pageContent.map((image, index) => (
               <span
                 key={index}
-                className={`mx-1 rounded-[50%] h-4 w-4 border-2 border-blue cursor-pointer ${
-                  currentIndex === index ? "bg-blue transform w-10 transition duration-500" : ""
+                className={`mx-1 rounded-full cursor-pointer ${
+                  currentIndex === index
+                    ? "bg-blue h-4 w-8 origin-center transition duration-500"
+                    : "h-4 w-4 border-2 border-blue"
                 }`}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}

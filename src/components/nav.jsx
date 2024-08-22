@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <motion.header
-        className="z-50 flex justify-between sticky -my-9 top-0 items-center py-4 px-16"
+        className="z-50 flex justify-between sticky -my-10 top-0 items-center py-4 px-16"
         variants={headerVariants}
         initial="hidden"
         animate="visible"
