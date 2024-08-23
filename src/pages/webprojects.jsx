@@ -1,11 +1,11 @@
-import Background from "../components/background";
+import PageContent from "../components/projectsPageContent";
+import { WebProjectsItems } from "../db";
 
 const Webprojects = () => {
   return (
     <>
-      <div className="h-screen w-screen" role="main">
-        <Background />
-        <div>gguhijok</div>
+      <div className="w-screen h-screen min-h-screen" role="main">
+        <PageContent pageContent={WebProjectsItems} />
       </div>
     </>
   );
