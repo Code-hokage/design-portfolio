@@ -21,15 +21,15 @@ const PageContent = ({ pageContent }) => {
             block: "center",
             inline: "center",
           });
-        }, 100); // Adding a small delay can help with smooth transitions
+        }, 100);
       }
     }
   }, [currentIndex]);
 
   const getSlideStyle = (index) =>
     index === currentIndex
-      ? "opacity-100 border-2 border-blue mx-8 z-10 transform transition-all duration-[2s]"
-      : "opacity-30 scale-90";
+      ? "border-2 border-blue filter-none mx-8 z-10 transform transition-all duration-[2s]"
+      : "scale-90 grayscale";
 
   const currentPageContent = pageContent[currentIndex];
 
@@ -85,24 +85,22 @@ const PageContent = ({ pageContent }) => {
       </div>
 
       <div className="w-1/2 h-full flex items-center justify-between pr-16">
-        <div className="p-4 w-4/5 h-full overflow-y-auto overflow-x-hidden no-scrollbar">
+        <div className="w-4/5 h-full overflow-y-auto overflow-x-hidden no-scrollbar snap-y snap-center -skew-x-[10deg]">
           <div
-            className="w-full h-3/5 flex flex-col gap-4 items-center"
+            className="w-full h-3/5 flex flex-col gap-4 items-center snap-center"
             aria-live="polite"
             aria-atomic="true"
             ref={sliderRef}
-            style={{ scrollSnapType: "y mandatory" }}
           >
             {pageContent.map((image, index) => (
               <img
                 key={index}
                 src={image.url}
                 alt={`Slide ${index}`}
-                className={`slide w-full h-full object-cover transition-all duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
+                className={`w-full h-full object-cover transition-all duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
                   index
                 )}`}
                 data-index={index}
-                style={{ scrollSnapAlign: "center" }}
                 onClick={() => setCurrentIndex(index)}
               />
             ))}

@@ -51,19 +51,5 @@ body::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-/* .scroll-smooth {
-  scroll-behavior: smooth;
-  transition-property: transform, opacity;
-  transition-duration: 2s;
-} */
-
-/* .no-scrollbar {
-  scroll-snap-type: y mandatory;
-} */
-
-.slide {
-  scroll-snap-align: center;
-}
-
 
 
