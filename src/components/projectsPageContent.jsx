@@ -4,37 +4,65 @@ import Background from "./background";
 import Showcase from "./imgSlider";
 import ProjectGithub from "./projectGithub";
 import "animate.css";
+import { motion, useScroll, useSpring, animate } from "framer-motion";
+
+
+const slideVariants = {
+  animation: {
+    y: [10, -30],
+    x: [0],
+    transition: {
+      y: {
+        yoyo: Infinity,
+        duration: 2,
+        ease: "easeOut",
+      },
+    },
+  },
+};
 
 const PageContent = ({ pageContent }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
 
-  useEffect(() => {
-    if (sliderRef.current) {
-      const middleImage = sliderRef.current.querySelector(
-        `.slide-${currentIndex}`
-      );
-      if (middleImage) {
-        setTimeout(() => {
-          middleImage.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "center",
-          });
-        }, 100);
-      }
-    }
-  }, [currentIndex]);
+  const scrollRef = useRef(null);
+  const { scrollYProgress } = useScroll({ container: scrollRef });
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  // useEffect(() => {
+  //   if (sliderRef.current) {
+  //     const middleImage = sliderRef.current.querySelector(
+  //       `.slide-${currentIndex}`
+  //     );
+  //     if (middleImage) {
+  //       setTimeout(() => {
+  //         middleImage.scrollIntoView({
+  //           behavior: "smooth",
+  //           block: "center",
+  //           inline: "center",
+  //         });
+  //       }, 1000);
+  //     }
+  //   }
+  // }, [currentIndex]);
 
   const getSlideStyle = (index) =>
-    index === currentIndex
-      ? "border-2 border-blue filter-none mx-8 z-10 transform transition-all duration-[2s]"
-      : "scale-90 grayscale";
+    index === currentIndex ? "border-2 border-blue" : "";
 
   const currentPageContent = pageContent[currentIndex];
 
   return (
     <div className="w-full h-full flex justify-center items-center">
+      <motion.div
+        viewport={{ root: scrollRef }}
+        style={{ scaleY }}
+        className={`bg-blue fixed right-0 top-0 bottom-0 w-2 origin-top`}
+      />
+
       <div className="w-1/2 h-full">
         <Background bgStyle={currentPageContent.bgStyle} />
         <div className="flex justify-between px-16 -my-16">
@@ -85,26 +113,41 @@ const PageContent = ({ pageContent }) => {
       </div>
 
       <div className="w-1/2 h-full flex items-center justify-between pr-16">
-        <div className="w-4/5 h-full overflow-y-auto overflow-x-hidden no-scrollbar snap-y snap-center -skew-x-[10deg]">
-          <div
-            className="w-full h-3/5 flex flex-col gap-4 items-center snap-center"
-            aria-live="polite"
-            aria-atomic="true"
-            ref={sliderRef}
-          >
-            {pageContent.map((image, index) => (
+        <div
+          className="w-full h-full p-4 flex flex-col gap-4 items-center overflow-y-scroll overflow-x-hidden snap-y no-scrollbar -skew-x-[10deg]"
+          aria-live="polite"
+          aria-atomic="true"
+          // ref={sliderRef}
+          ref={scrollRef}
+        >
+          {pageContent.map((image, index) => (
+            // <img
+            //   key={index}
+            //   src={image.url}
+            //   alt={`Slide ${index}`}
+            //   className={`w-full h-full object-cover snap-center transition-all duration-[1s] cursor-pointer slide-${index} ${getSlideStyle(
+            //     index
+            //   )}`}
+            //   data-index={index}
+            //   onClick={() => setCurrentIndex(index)}
+            // />
+            <motion.div
+              key={index}
+              data-index={index}
+              variants={slideVariants}
+              animate="animation"
+              onClick={() => setCurrentIndex(index)}
+              className={`w-full h-[60%] snap-center transition-all duration-[1s] cursor-pointer slide-${index} ${getSlideStyle(
+                index
+              )}`}
+            >
               <img
-                key={index}
                 src={image.url}
                 alt={`Slide ${index}`}
-                className={`w-full h-full object-cover transition-all duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
-                  index
-                )}`}
-                data-index={index}
-                onClick={() => setCurrentIndex(index)}
+                className="w-full h-full object-cover"
               />
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
 
         <div className="flex flex-col">
