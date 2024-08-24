@@ -1,21 +1,45 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
 import ProjectGithub from "./projectGithub";
-import "animate.css";
-import { motion, useScroll, useSpring, animate } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
+// const slideVariants = {
+//   animation: {
+//     x: [0],
+//     y: [0, -10],
+//     transition: {
+//       // x: {
+//       //   repeat: Infinity,
+//       //   duration: 5,
+//       //   ease: "easeOut",
+//       // },
+//       y: {
+//         repeat: Infinity,
+//         duration: 3,
+//         // ease: [0.17, 0.67, 0.83, 0.67]
+//       },
+//     },
+//   },
+// };
 
 const slideVariants = {
   animation: {
-    y: [10, -30],
-    x: [0],
+    x: [0, -5, 0],
+    y: [10, -8, 0],
     transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "mirror", // Smoothly returns to the start
+        duration: 4, // Adjust the duration for smoothness
+        ease: "easeInOut", // Ease in and out for smooth transitions
+      },
       y: {
-        yoyo: Infinity,
-        duration: 2,
-        ease: "easeOut",
+        repeat: Infinity,
+        repeatType: "mirror", // Smoothly returns to the start
+        duration: 4, // Match duration for synchronized animation
+        ease: "easeInOut", // Ease in and out for smooth transitions
       },
     },
   },
@@ -23,9 +47,8 @@ const slideVariants = {
 
 const PageContent = ({ pageContent }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const sliderRef = useRef(null);
-
   const scrollRef = useRef(null);
+
   const { scrollYProgress } = useScroll({ container: scrollRef });
   const scaleY = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -33,25 +56,23 @@ const PageContent = ({ pageContent }) => {
     restDelta: 0.001,
   });
 
-  // useEffect(() => {
-  //   if (sliderRef.current) {
-  //     const middleImage = sliderRef.current.querySelector(
-  //       `.slide-${currentIndex}`
-  //     );
-  //     if (middleImage) {
-  //       setTimeout(() => {
-  //         middleImage.scrollIntoView({
-  //           behavior: "smooth",
-  //           block: "center",
-  //           inline: "center",
-  //         });
-  //       }, 1000);
-  //     }
-  //   }
-  // }, [currentIndex]);
+  useEffect(() => {
+    const slider = scrollRef.current;
+    if (slider) {
+      const selectedImage = slider.querySelector(`.slide-${currentIndex}`);
+      if (selectedImage) {
+        selectedImage.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }
+  }, [currentIndex]);
 
   const getSlideStyle = (index) =>
-    index === currentIndex ? "border-2 border-blue" : "";
+    index === currentIndex
+      ? "border-2 border-blue transform scale-110"
+      : "transform scale-90";
 
   const currentPageContent = pageContent[currentIndex];
 
@@ -112,35 +133,39 @@ const PageContent = ({ pageContent }) => {
         </div>
       </div>
 
-      <div className="w-1/2 h-full flex items-center justify-between pr-16">
+      <div className="w-1/2 h-full flex items-center justify-between gap-4 pr-16">
         <div
-          className="w-full h-full p-4 flex flex-col gap-4 items-center overflow-y-scroll overflow-x-hidden snap-y no-scrollbar -skew-x-[10deg]"
+          className="w-full h-full p-4 flex flex-col gap-4 items-center overflow-y-scroll overflow-x-hidden snap-y snap-mandatory no-scrollbar -skew-x-[10deg]"
           aria-live="polite"
           aria-atomic="true"
-          // ref={sliderRef}
           ref={scrollRef}
         >
+          <div className="w-[90%] h-[70%] text-transparent cursor-default">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
+            at autem dolorum eligendi praesentium, deleniti similique illo
+            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
+            consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
+            consecteturlaudantium culp Lorem ipsum, dolor sit amet consectetur
+          </div>
           {pageContent.map((image, index) => (
-            // <img
-            //   key={index}
-            //   src={image.url}
-            //   alt={`Slide ${index}`}
-            //   className={`w-full h-full object-cover snap-center transition-all duration-[1s] cursor-pointer slide-${index} ${getSlideStyle(
-            //     index
-            //   )}`}
-            //   data-index={index}
-            //   onClick={() => setCurrentIndex(index)}
-            // />
             <motion.div
               key={index}
               data-index={index}
-              variants={slideVariants}
-              animate="animation"
               onClick={() => setCurrentIndex(index)}
-              className={`w-full h-[60%] snap-center transition-all duration-[1s] cursor-pointer slide-${index} ${getSlideStyle(
+              className={`relative w-[85%] h-[60%] cursor-pointer slide-${index} ${getSlideStyle(
                 index
               )}`}
             >
+              <motion.div
+                className="absolute m-auto -left-5 right-0 top-0 bottom-0 w-[110%] h-[115%] bg-transparent"
+                variants={slideVariants}
+                animate={currentIndex === index ? "animation" : ""}
+              >
+                <div class="absolute inset-y-0 right-0 w-10 bg-darkBlue"></div>
+                <div class="absolute inset-y-0 left-0 w-10 bg-darkBlue"></div>
+                <div class="absolute inset-x-0 top-0 h-10 bg-darkBlue"></div>
+                <div class="absolute inset-x-0 bottom-0 h-10 bg-darkBlue"></div>
+              </motion.div>
               <img
                 src={image.url}
                 alt={`Slide ${index}`}
@@ -148,6 +173,14 @@ const PageContent = ({ pageContent }) => {
               />
             </motion.div>
           ))}
+
+          <div className="w-[90%] h-[70%] text-transparent cursor-default">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
+            at autem dolorum eligendi praesentium, deleniti similique illo
+            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
+            consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
+            consectetur
+          </div>
         </div>
 
         <div className="flex flex-col">
@@ -156,8 +189,8 @@ const PageContent = ({ pageContent }) => {
               key={index}
               className={`mx-1 rounded-full my-2 cursor-pointer ${
                 currentIndex === index
-                  ? "bg-blue h-8 w-4 origin-center transition duration-500"
-                  : "h-4 w-4 border-2 border-blue"
+                  ? "bg-blue h-6 w-3 origin-center transition duration-500"
+                  : "h-3 w-3 border-2 border-blue"
               }`}
               onClick={() => setCurrentIndex(index)}
               aria-label={`Go to slide ${index + 1}`}
