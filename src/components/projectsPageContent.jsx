@@ -130,6 +130,7 @@ const PageContent = ({ pageContent }) => {
               Nxt{`>`}
             </span>
           </button>
+          <div className="test bg-blue"></div>
         </div>
       </div>
 
@@ -145,14 +146,13 @@ const PageContent = ({ pageContent }) => {
             at autem dolorum eligendi praesentium, deleniti similique illo
             molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
             consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
-            consecteturlaudantium culp Lorem ipsum, dolor sit amet consectetur
           </div>
           {pageContent.map((image, index) => (
             <motion.div
               key={index}
               data-index={index}
               onClick={() => setCurrentIndex(index)}
-              className={`relative w-[85%] h-[60%] cursor-pointer slide-${index} ${getSlideStyle(
+              className={`relative w-[90%] h-[60%] cursor-pointer slide-${index} ${getSlideStyle(
                 index
               )}`}
             >
@@ -178,8 +178,6 @@ const PageContent = ({ pageContent }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
             at autem dolorum eligendi praesentium, deleniti similique illo
             molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
-            consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
-            consectetur
           </div>
         </div>
 
