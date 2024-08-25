@@ -50,6 +50,22 @@ body {
 body::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+.slide-cont {
+  perspective: 200px;
+}
+
+.slide {
+  transform: rotateY(-5deg);
+}
+
+.top {
+  /* clip-path: path("M0,50 Q250,0 500,50 L500,0 L0,0 Z"); */
+  clip-path: path("M0,30 Q250,0 500,30 L500,0 L0,0 Z");
+}
+
+.bottom {
+  clip-path: path("M0,10 Q250,-10 500,20 L500,300 L0,300 Z");
+}
 
 
 

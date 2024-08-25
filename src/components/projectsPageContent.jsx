@@ -5,41 +5,22 @@ import Showcase from "./imgSlider";
 import ProjectGithub from "./projectGithub";
 import { motion, useScroll, useSpring } from "framer-motion";
 
-// const slideVariants = {
-//   animation: {
-//     x: [0],
-//     y: [0, -10],
-//     transition: {
-//       // x: {
-//       //   repeat: Infinity,
-//       //   duration: 5,
-//       //   ease: "easeOut",
-//       // },
-//       y: {
-//         repeat: Infinity,
-//         duration: 3,
-//         // ease: [0.17, 0.67, 0.83, 0.67]
-//       },
-//     },
-//   },
-// };
-
 const slideVariants = {
   animation: {
-    x: [0, -5, 0],
-    y: [10, -8, 0],
+    x: [0, -3, 0],
+    y: [4, -4, 0],
     transition: {
       x: {
         repeat: Infinity,
-        repeatType: "mirror", // Smoothly returns to the start
-        duration: 4, // Adjust the duration for smoothness
-        ease: "easeInOut", // Ease in and out for smooth transitions
+        repeatType: "mirror",
+        duration: 4,
+        ease: "easeInOut",
       },
       y: {
         repeat: Infinity,
-        repeatType: "mirror", // Smoothly returns to the start
-        duration: 4, // Match duration for synchronized animation
-        ease: "easeInOut", // Ease in and out for smooth transitions
+        repeatType: "mirror",
+        duration: 4,
+        ease: "easeInOut",
       },
     },
   },
@@ -71,13 +52,13 @@ const PageContent = ({ pageContent }) => {
 
   const getSlideStyle = (index) =>
     index === currentIndex
-      ? "border-2 border-blue transform scale-110"
-      : "transform scale-90";
+      ? "transform scale-110"
+      : "transform scale-95";
 
   const currentPageContent = pageContent[currentIndex];
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <div className="w-screen h-screen flex justify-center items-center">
       <motion.div
         viewport={{ root: scrollRef }}
         style={{ scaleY }}
@@ -130,13 +111,12 @@ const PageContent = ({ pageContent }) => {
               Nxt{`>`}
             </span>
           </button>
-          <div className="test bg-blue"></div>
         </div>
       </div>
 
       <div className="w-1/2 h-full flex items-center justify-between gap-4 pr-16">
         <div
-          className="w-full h-full p-4 flex flex-col gap-4 items-center overflow-y-scroll overflow-x-hidden snap-y snap-mandatory no-scrollbar -skew-x-[10deg]"
+          className="slide-cont w-full h-full px-4 flex flex-col items-center overflow-y-scroll overflow-x-hidden snap-y snap-mandatory no-scrollbar -skew-x-[10deg]"
           aria-live="polite"
           aria-atomic="true"
           ref={scrollRef}
@@ -152,20 +132,26 @@ const PageContent = ({ pageContent }) => {
               key={index}
               data-index={index}
               onClick={() => setCurrentIndex(index)}
-              className={`relative w-[90%] h-[60%] cursor-pointer slide-${index} ${getSlideStyle(
+              className={`slide relative w-[90%] h-[65%] cursor-pointer slide-${index} ${getSlideStyle(
                 index
               )}`}
             >
+              {/* animation div and concave and convex shapes */}
               <motion.div
-                className="absolute m-auto -left-5 right-0 top-0 bottom-0 w-[110%] h-[115%] bg-transparent"
+                className="absolute m-auto -left-5 right-0 top-0 bottom-0 w-[110%] h-[105%] bg-transparent"
                 variants={slideVariants}
                 animate={currentIndex === index ? "animation" : ""}
               >
-                <div class="absolute inset-y-0 right-0 w-10 bg-darkBlue"></div>
-                <div class="absolute inset-y-0 left-0 w-10 bg-darkBlue"></div>
-                <div class="absolute inset-x-0 top-0 h-10 bg-darkBlue"></div>
-                <div class="absolute inset-x-0 bottom-0 h-10 bg-darkBlue"></div>
+                <div class="absolute inset-y-0 right-0 w-9 bg-darkBlue"></div>
+                <div class="absolute inset-y-0 left-0 w-8 bg-darkBlue"></div>
+                {/* <div class="absolute inset-x-0 top-0 h-7 bg-blue"></div> */}
+                {/* <div class="absolute inset-x-0 bottom-0 h-7 bg-blue"></div> */}
+
+                <div className="top absolute top-0 -right-7 w-full h-[20%] bg-darkBlue"></div>
+                <div className="bottom absolute bottom-0 -right-7 w-full h-[15%] bg-darkBlue"></div>
               </motion.div>
+
+              {/* image */}
               <img
                 src={image.url}
                 alt={`Slide ${index}`}
