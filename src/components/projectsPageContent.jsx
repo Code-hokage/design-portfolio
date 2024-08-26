@@ -52,8 +52,8 @@ const PageContent = ({ pageContent }) => {
 
   const getSlideStyle = (index) =>
     index === currentIndex
-      ? "transform scale-110"
-      : "transform scale-95";
+      ? "current-slide"
+      : "";
 
   const currentPageContent = pageContent[currentIndex];
 
@@ -65,7 +65,7 @@ const PageContent = ({ pageContent }) => {
         className={`bg-blue fixed right-0 top-0 bottom-0 w-2 origin-top`}
       />
 
-      <div className="w-1/2 h-full">
+      <div className="w-[45%] h-full">
         <Background bgStyle={currentPageContent.bgStyle} />
         <div className="flex justify-between px-16 -my-16">
           <div>
@@ -114,9 +114,9 @@ const PageContent = ({ pageContent }) => {
         </div>
       </div>
 
-      <div className="w-1/2 h-full flex items-center justify-between gap-4 pr-16">
+      <div className="w-[55%] h-full flex items-center justify-between gap-8 pr-16">
         <div
-          className="slide-cont w-full h-full px-4 flex flex-col items-center overflow-y-scroll overflow-x-hidden snap-y snap-mandatory no-scrollbar -skew-x-[10deg]"
+          className="slide-cont w-full h-full px-4 mt-32 flex flex-col items-center gap-4 overflow-y-scroll overflow-x-hidden no-scrollbar -skew-x-[10deg]"
           aria-live="polite"
           aria-atomic="true"
           ref={scrollRef}
@@ -126,13 +126,14 @@ const PageContent = ({ pageContent }) => {
             at autem dolorum eligendi praesentium, deleniti similique illo
             molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
             consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
+            consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
           </div>
           {pageContent.map((image, index) => (
             <motion.div
               key={index}
               data-index={index}
               onClick={() => setCurrentIndex(index)}
-              className={`slide relative w-[90%] h-[65%] cursor-pointer slide-${index} ${getSlideStyle(
+              className={`slide relative w-[80%] h-[60%] cursor-pointer slide-${index} ${getSlideStyle(
                 index
               )}`}
             >

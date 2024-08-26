@@ -58,6 +58,10 @@ body::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
   transform: rotateY(-5deg);
 }
 
+.current-slide {
+  scale: 1.2;
+}
+
 .top {
   /* clip-path: path("M0,50 Q250,0 500,50 L500,0 L0,0 Z"); */
   clip-path: path("M0,30 Q250,0 500,30 L500,0 L0,0 Z");
