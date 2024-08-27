@@ -114,9 +114,9 @@ const PageContent = ({ pageContent }) => {
         </div>
       </div>
 
-      <div className="w-[55%] h-full flex items-center justify-between gap-8 pr-16">
+      <div className="w-[55%] h-full flex items-center justify-between gap-8 pt-16 pr-16">
         <div
-          className="slide-cont w-full h-full px-4 mt-32 flex flex-col items-center gap-4 overflow-y-scroll overflow-x-hidden no-scrollbar -skew-x-[10deg]"
+          className="slide-cont w-full h-full px-4 flex flex-col items-center gap-4 overflow-y-scroll overflow-x-hidden no-scrollbar -skew-x-[10deg]"
           aria-live="polite"
           aria-atomic="true"
           ref={scrollRef}
@@ -125,8 +125,8 @@ const PageContent = ({ pageContent }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
             at autem dolorum eligendi praesentium, deleniti similique illo
             molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
-            consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
-            consequatur mollitia laudantium culp Lorem ipsum, dolor sit amet
+            at autem dolorum eligendi praesentium, deleniti similique illo
+            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
           </div>
           {pageContent.map((image, index) => (
             <motion.div
@@ -156,6 +156,7 @@ const PageContent = ({ pageContent }) => {
               <img
                 src={image.url}
                 alt={`Slide ${index}`}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </motion.div>
