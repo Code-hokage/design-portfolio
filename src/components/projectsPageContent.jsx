@@ -67,8 +67,8 @@ const PageContent = ({ pageContent }) => {
 
       <div className="w-[45%] h-full">
         <Background bgStyle={currentPageContent.bgStyle} />
-        <div className="flex justify-between px-16 -my-16">
-          <div>
+        <div className="w-[85%] flex flex-col justify-between gap-4 pl-16 -my-12">
+          <div className="flex items-start justify-between gap-4">
             <Textbox
               title={currentPageContent.title}
               description={currentPageContent.description}
@@ -85,7 +85,7 @@ const PageContent = ({ pageContent }) => {
           <Showcase images={currentPageContent.images} />
         </div>
 
-        <div className="w-full flex justify-between cursor-pointer px-16 my-32">
+        {/* <div className="w-full flex justify-between cursor-pointer pl-16 my-32">
           <button
             className="flex"
             onClick={() =>
@@ -111,7 +111,7 @@ const PageContent = ({ pageContent }) => {
               Nxt{`>`}
             </span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="w-[55%] h-full flex items-center justify-between gap-8 pt-16 pr-16">

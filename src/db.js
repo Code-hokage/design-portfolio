@@ -136,7 +136,7 @@ export const WebProjectsItems = [
     id: "5",
     url: "/imgs/otasco/otasco1.png",
     title: "Strategic Planning",
-    description: "Lorem, ipsuidem impedit autsit nisi.",
+    description: "Lorem, ipsuidem impedit autsit nisi. Lorem, ipsuidem impedit autsit nisi",
     bgStyle: "bg-otasco",
     icon: {
       Icon: FaGithub,
