@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
@@ -51,9 +52,7 @@ const PageContent = ({ pageContent }) => {
   }, [currentIndex]);
 
   const getSlideStyle = (index) =>
-    index === currentIndex
-      ? "current-slide"
-      : "";
+    index === currentIndex ? "current-slide" : "";
 
   const currentPageContent = pageContent[currentIndex];
 
@@ -73,14 +72,17 @@ const PageContent = ({ pageContent }) => {
               title={currentPageContent.title}
               description={currentPageContent.description}
             />
-            {currentPageContent.icon && (
-              <ProjectGithub
-                hrefUrl={currentPageContent.icon.hrefUrl}
-                Icon={currentPageContent.icon.Icon}
-                iconName={currentPageContent.icon.iconName}
-                style={currentPageContent.icon.style}
-              />
-            )}
+            <div className="flex flex-col items-start justify-between z-50">
+              <Link to="/">to site</Link>
+              {currentPageContent.icon && (
+                <ProjectGithub
+                  hrefUrl={currentPageContent.icon.hrefUrl}
+                  Icon={currentPageContent.icon.Icon}
+                  iconName={currentPageContent.icon.iconName}
+                  style={currentPageContent.icon.style}
+                />
+              )}
+            </div>
           </div>
           <Showcase images={currentPageContent.images} />
         </div>
@@ -124,9 +126,9 @@ const PageContent = ({ pageContent }) => {
           <div className="w-[90%] h-[70%] text-transparent cursor-default">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
             at autem dolorum eligendi praesentium, deleniti similique illo
-            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
-            at autem dolorum eligendi praesentium, deleniti similique illo
-            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
+            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit at autem
+            dolorum eligendi praesentium, deleniti similique illo molestiae vero
+            eaque. Nostrum sapiente aliquam aut, impedit
           </div>
           {pageContent.map((image, index) => (
             <motion.div
