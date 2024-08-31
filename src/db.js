@@ -66,11 +66,17 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-ihatins",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/1",
-      iconName: "Github",
-      style: "hover:text-grey",
+    // icon: {
+    //   Icon: FaGithub,
+    //   hrefUrl: "/1",
+    //   iconName: "Github",
+    //   style: "hover:text-grey",
+    // },
+    toSite: {
+      siteName: "To site",
+      hrefUrl: "https://ihatins.com",
+      githubName: "Github",
+      githubUrl: "https://github.com/adnanaadam/ihatins",
     },
     images: [
       { url: "/imgs/ihatins/ihat1.png" },
@@ -84,12 +90,12 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-west",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/2",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
+    // icon: {
+    //   Icon: FaGithub,
+    //   hrefUrl: "/2",
+    //   iconName: "Github",
+    //   style: "hover:text-grey",
+    // },
     images: [
       { url: "/imgs/west/west2.jpg" },
       { url: "/imgs/west/west3.jpg" },
@@ -102,12 +108,12 @@ export const WebProjectsItems = [
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-wed",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/3",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
+    // icon: {
+    //   Icon: FaGithub,
+    //   hrefUrl: "/3",
+    //   iconName: "Github",
+    //   style: "hover:text-grey",
+    // },
     images: [
       { url: "/imgs/wed/wed2.png" },
       { url: "/imgs/wed/wed3.png" },
@@ -120,12 +126,12 @@ export const WebProjectsItems = [
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgStyle: "bg-mine",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/4",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
+    // icon: {
+    //   Icon: FaGithub,
+    //   hrefUrl: "/4",
+    //   iconName: "Github",
+    //   style: "hover:text-grey",
+    // },
     images: [
       { url: "/imgs/mine/mine1.png" },
       { url: "/imgs/mine/mine2.png" },
@@ -138,12 +144,12 @@ export const WebProjectsItems = [
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi. Lorem, ipsuidem impedit autsit nisi",
     bgStyle: "bg-otasco",
-    icon: {
-      Icon: FaGithub,
-      hrefUrl: "/5",
-      iconName: "Github",
-      style: "hover:text-grey",
-    },
+    // icon: {
+    //   Icon: FaGithub,
+    //   hrefUrl: "/5",
+    //   iconName: "Github",
+    //   style: "hover:text-grey",
+    // },
     images: [
       { url: "/imgs/otasco/otasco2.png" },
       { url: "/imgs/otasco/otasco3.png" },

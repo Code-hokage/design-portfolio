@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
-import ProjectGithub from "./projectGithub";
+import ToSite from "./toSite";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const slideVariants = {
@@ -66,20 +65,21 @@ const PageContent = ({ pageContent }) => {
 
       <div className="w-[45%] h-full">
         <Background bgStyle={currentPageContent.bgStyle} />
-        <div className="w-[85%] flex flex-col justify-between gap-4 pl-16 -my-12">
-          <div className="flex items-start justify-between gap-4">
-            <Textbox
-              title={currentPageContent.title}
-              description={currentPageContent.description}
-            />
-            <div className="flex flex-col items-start justify-between z-50">
-              <Link to="/">to site</Link>
-              {currentPageContent.icon && (
-                <ProjectGithub
-                  hrefUrl={currentPageContent.icon.hrefUrl}
-                  Icon={currentPageContent.icon.Icon}
-                  iconName={currentPageContent.icon.iconName}
-                  style={currentPageContent.icon.style}
+        <div className="w-[95%] flex flex-col justify-between gap-4 pl-16 -my-12">
+          <div className="w-full flex items-start justify-between gap-6">
+            <div>
+              <Textbox
+                title={currentPageContent.title}
+                description={currentPageContent.description}
+              />
+            </div>
+            <div>
+              {currentPageContent.toSite && (
+                <ToSite
+                  siteName={currentPageContent.toSite.siteName}
+                  hrefUrl={currentPageContent.toSite.hrefUrl}
+                  githubName={currentPageContent.toSite.githubName}
+                  githubUrl={currentPageContent.toSite.githubUrl}
                 />
               )}
             </div>
