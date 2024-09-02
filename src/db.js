@@ -73,7 +73,7 @@ export const WebProjectsItems = [
     //   style: "hover:text-grey",
     // },
     toSite: {
-      siteName: "To site",
+      siteName: "Visit site",
       hrefUrl: "https://ihatins.com",
       githubName: "Github",
       githubUrl: "https://github.com/adnanaadam/ihatins",
