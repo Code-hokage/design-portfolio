@@ -60,7 +60,7 @@ const PageContent = ({ pageContent }) => {
       <motion.div
         viewport={{ root: scrollRef }}
         style={{ scaleY }}
-        className={`bg-blue fixed right-0 top-0 bottom-0 w-2 origin-top`}
+        className={`bg-blue fixed right-0 top-0 bottom-0 w-2 rounded origin-top`}
       />
 
       <div className="w-[45%] h-full">
