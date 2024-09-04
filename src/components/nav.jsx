@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <motion.header
-        className="z-50 flex justify-between sticky -my-10 top-0 items-center py-4 px-16"
+        className="z-50 flex justify-between sticky -my-[2.1rem] bg-darkBlue shadow-md shadow-blue/30 top-0 items-center py-3 px-16"
         variants={headerVariants}
         initial="hidden"
         animate="visible"
@@ -51,14 +51,13 @@ const Navbar = () => {
                 return (
                   <motion.div
                     variants={buttonVariants}
-                    whileHover="hover"
                     whileTap="tap"
                   >
                     <NavLink
                       key={link.path}
                       to={link.path}
                       className={({ isActive }) => {
-                        return isActive ? activeLink : "text-base";
+                        return isActive ? activeLink : "text-base hover:text-blue transition-all duration-500";
                       }}
                     >
                       {link.Name}
@@ -70,7 +69,6 @@ const Navbar = () => {
 
             <motion.div
               variants={buttonVariants}
-              whileHover="hover"
               whileTap="tap"
             >
               <Link

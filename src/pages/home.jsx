@@ -65,7 +65,6 @@ const Home = () => {
               <motion.div
                 className="flex items-center"
                 variants={buttonVariants}
-                whileHover="hover"
                 whileTap="tap"
               >
                 <Link

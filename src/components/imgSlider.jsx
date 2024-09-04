@@ -21,19 +21,18 @@ const Showcase = ({ images }) => {
   return (
     <>
       <div
-        className={`border-2 border-blue transition-all ${
+        className={`border-4 border-blue h-[9rem] w-[40%] transition-all ${
           transitioning ? "opacity-0 translate-x-4 duration-0" : "opacity-100 translate-x-0 duration-500"
         }`}
       >
         <SimpleImageSlider
-          width={160}
-          height={120}
+          width="100%"
+          height="100%"
           images={currentImgs}
           showBullets={false}
           showNavs={false}
           autoPlay={true}
           autoPlayDelay={2}
-          navStyle={{ color: "#fff" }}
         />
       </div>
     </>

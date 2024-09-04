@@ -1,61 +1,93 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Textbox from "./text";
 import Background from "./background";
 import Showcase from "./imgSlider";
-import ProjectGithub from "./projectGithub";
-import "animate.css";
+import ToSite from "./toSite";
+import { motion, useScroll, useSpring } from "framer-motion";
+
+const slideVariants = {
+  animation: {
+    x: [0, -3, 0],
+    y: [4, -4, 0],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 4,
+        ease: "easeInOut",
+      },
+      y: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 4,
+        ease: "easeInOut",
+      },
+    },
+  },
+};
 
 const PageContent = ({ pageContent }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const sliderRef = useRef(null);
+  const scrollRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({ container: scrollRef });
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
-    if (sliderRef.current) {
-      const middleImage = sliderRef.current.querySelector(
-        `.slide-${currentIndex}`
-      );
-      if (middleImage) {
-        setTimeout(() => {
-          middleImage.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "center",
-          });
-        }, 100); // Adding a small delay can help with smooth transitions
+    const slider = scrollRef.current;
+    if (slider) {
+      const selectedImage = slider.querySelector(`.slide-${currentIndex}`);
+      if (selectedImage) {
+        selectedImage.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
       }
     }
   }, [currentIndex]);
 
   const getSlideStyle = (index) =>
-    index === currentIndex
-      ? "opacity-100 border-2 border-blue mx-8 z-10 transform transition-all duration-[2s]"
-      : "opacity-30 scale-90";
+    index === currentIndex ? "current-slide" : "";
 
   const currentPageContent = pageContent[currentIndex];
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
-      <div className="w-1/2 h-full">
+    <div className="w-screen h-screen flex justify-center items-center">
+      <motion.div
+        viewport={{ root: scrollRef }}
+        style={{ scaleY }}
+        className={`bg-blue fixed right-0 top-0 bottom-0 w-2 rounded origin-top`}
+      />
+
+      <div className="w-[45%] h-full">
         <Background bgStyle={currentPageContent.bgStyle} />
-        <div className="flex justify-between px-16 -my-16">
-          <div>
-            <Textbox
-              title={currentPageContent.title}
-              description={currentPageContent.description}
-            />
-            {currentPageContent.icon && (
-              <ProjectGithub
-                hrefUrl={currentPageContent.icon.hrefUrl}
-                Icon={currentPageContent.icon.Icon}
-                iconName={currentPageContent.icon.iconName}
-                style={currentPageContent.icon.style}
+        <div className="w-full flex flex-col justify-between gap-6 pl-16 -my-12">
+          <div className="w-full flex items-start justify-between">
+            <div className="w-[70%]">
+              <Textbox
+                title={currentPageContent.title}
+                description={currentPageContent.description}
               />
-            )}
+            </div>
+            <div className="w-20%">
+              {currentPageContent.toSite && (
+                <ToSite
+                  siteName={currentPageContent.toSite.siteName}
+                  hrefUrl={currentPageContent.toSite.hrefUrl}
+                  githubName={currentPageContent.toSite.githubName}
+                  githubUrl={currentPageContent.toSite.githubUrl}
+                />
+              )}
+            </div>
           </div>
           <Showcase images={currentPageContent.images} />
         </div>
 
-        <div className="w-full flex justify-between cursor-pointer px-16 my-32">
+        {/* <div className="w-full flex justify-between cursor-pointer pl-16 my-32">
           <button
             className="flex"
             onClick={() =>
@@ -81,31 +113,61 @@ const PageContent = ({ pageContent }) => {
               Nxt{`>`}
             </span>
           </button>
-        </div>
+        </div> */}
       </div>
 
-      <div className="w-1/2 h-full flex items-center justify-between pr-16">
-        <div className="p-4 w-4/5 h-full overflow-y-auto overflow-x-hidden no-scrollbar">
-          <div
-            className="w-full h-3/5 flex flex-col gap-4 items-center"
-            aria-live="polite"
-            aria-atomic="true"
-            ref={sliderRef}
-            style={{ scrollSnapType: "y mandatory" }}
-          >
-            {pageContent.map((image, index) => (
+      <div className="w-[55%] h-full flex items-center justify-between gap-8 pt-16 pr-16">
+        <div
+          className="slide-cont w-full h-full px-4 flex flex-col items-center gap-4 overflow-y-scroll overflow-x-hidden no-scrollbar -skew-x-[10deg]"
+          aria-live="polite"
+          aria-atomic="true"
+          ref={scrollRef}
+        >
+          <div className="w-[90%] h-[70%] text-transparent cursor-default">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
+            at autem dolorum eligendi praesentium, deleniti similique illo
+            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit at autem
+            dolorum eligendi praesentium, deleniti similique illo molestiae vero
+            eaque. Nostrum sapiente aliquam aut, impedit
+          </div>
+          {pageContent.map((image, index) => (
+            <motion.div
+              key={index}
+              data-index={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`slide relative w-[80%] h-[60%] cursor-pointer slide-${index} ${getSlideStyle(
+                index
+              )}`}
+            >
+              {/* animation div and concave and convex shapes */}
+              <motion.div
+                className="absolute m-auto -left-5 right-0 top-0 bottom-0 w-[110%] h-[105%] bg-transparent"
+                variants={slideVariants}
+                animate={currentIndex === index ? "animation" : ""}
+              >
+                <div class="absolute inset-y-0 right-0 w-9 bg-darkBlue"></div>
+                <div class="absolute inset-y-0 left-0 w-8 bg-darkBlue"></div>
+                {/* <div class="absolute inset-x-0 top-0 h-7 bg-blue"></div> */}
+                {/* <div class="absolute inset-x-0 bottom-0 h-7 bg-blue"></div> */}
+
+                <div className="top absolute top-0 -right-7 w-full h-[20%] bg-darkBlue"></div>
+                <div className="bottom absolute bottom-0 -right-7 w-full h-[15%] bg-darkBlue"></div>
+              </motion.div>
+
+              {/* image */}
               <img
-                key={index}
                 src={image.url}
                 alt={`Slide ${index}`}
-                className={`slide w-full h-full object-cover transition-all duration-[2s] cursor-pointer slide-${index} ${getSlideStyle(
-                  index
-                )}`}
-                data-index={index}
-                style={{ scrollSnapAlign: "center" }}
-                onClick={() => setCurrentIndex(index)}
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
-            ))}
+            </motion.div>
+          ))}
+
+          <div className="w-[90%] h-[70%] text-transparent cursor-default">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
+            at autem dolorum eligendi praesentium, deleniti similique illo
+            molestiae vero eaque. Nostrum sapiente aliquam aut, impedit
           </div>
         </div>
 
@@ -115,8 +177,8 @@ const PageContent = ({ pageContent }) => {
               key={index}
               className={`mx-1 rounded-full my-2 cursor-pointer ${
                 currentIndex === index
-                  ? "bg-blue h-8 w-4 origin-center transition duration-500"
-                  : "h-4 w-4 border-2 border-blue"
+                  ? "bg-blue h-6 w-3 origin-center transition duration-500"
+                  : "h-3 w-3 border-2 border-blue"
               }`}
               onClick={() => setCurrentIndex(index)}
               aria-label={`Go to slide ${index + 1}`}

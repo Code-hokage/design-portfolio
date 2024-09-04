@@ -47,23 +47,28 @@ body {
   background: #0ef;
 }
 
-body::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
-/* .scroll-smooth {
-  scroll-behavior: smooth;
-  transition-property: transform, opacity;
-  transition-duration: 2s;
-} */
-
-/* .no-scrollbar {
-  scroll-snap-type: y mandatory;
-} */
-
-.slide {
-  scroll-snap-align: center;
+.slide-cont {
+  perspective: 200px;
 }
 
+.slide {
+  transform: rotateY(-5deg);
+}
 
+.current-slide {
+  scale: 1.2;
+  transition: 0.5s;
+}
 
+.top {
+  /* clip-path: path("M0,50 Q250,0 500,50 L500,0 L0,0 Z"); */
+  clip-path: path("M0,30 Q250,0 500,30 L500,0 L0,0 Z");
+}
+
+.bottom {
+  clip-path: path("M0,10 Q250,-10 500,20 L500,300 L0,300 Z");
+}
