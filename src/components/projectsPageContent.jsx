@@ -65,15 +65,15 @@ const PageContent = ({ pageContent }) => {
 
       <div className="w-[45%] h-full">
         <Background bgStyle={currentPageContent.bgStyle} />
-        <div className="w-[95%] flex flex-col justify-between gap-4 pl-16 -my-12">
-          <div className="w-full flex items-start justify-between gap-6">
-            <div>
+        <div className="w-full flex flex-col justify-between gap-6 pl-16 -my-12">
+          <div className="w-full flex items-start justify-between">
+            <div className="w-[70%]">
               <Textbox
                 title={currentPageContent.title}
                 description={currentPageContent.description}
               />
             </div>
-            <div>
+            <div className="w-20%">
               {currentPageContent.toSite && (
                 <ToSite
                   siteName={currentPageContent.toSite.siteName}

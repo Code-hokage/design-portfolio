@@ -24,7 +24,7 @@ const ToSite = ({ siteName, hrefUrl, githubName, githubUrl }) => {
   return (
     <>
       <div
-        className={`flex flex-col items-start justify-between gap-4 p-2 transition-all cursor-pointer ${
+        className={`flex flex-col items-start justify-between gap-4 py-2 transition-all cursor-pointer ${
           transitioning
             ? "opacity-0 -translate-x-4 duration-0"
             : "opacity-100 translate-x-0 origin-left duration-500"
@@ -32,14 +32,14 @@ const ToSite = ({ siteName, hrefUrl, githubName, githubUrl }) => {
       >
         <Link
           to={hrefUrl}
-          className="inline-flex items-center text-base gap-2 *:transition-transform *:duration-500 group"
+          className="inline-flex items-center gap-2 *:transition-transform *:duration-500 group"
         >
           <span className="group-hover:text-blue">{siteName}</span>
           <FaArrowRight className="inline group-hover:text-blue group-hover:translate-x-2" />
         </Link>
         <Link
           to={githubUrl}
-          className="inline-flex items-center text-base gap-2 *:transition-transform *:duration-500 group"
+          className="inline-flex items-center gap-2 *:transition-transform *:duration-500 group"
         >
           <span className="group-hover:text-blue">{githubName}</span>
           <FaArrowRight className="inline group-hover:text-blue group-hover:translate-x-2" />
