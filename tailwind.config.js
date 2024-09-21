@@ -14,7 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/public/man.png')",
-        ihatins: "url('/public/imgs/ihatins/ihat5.png')",
+        ihatins: "url('/public/imgs/ihatins/mock-test0.png')",
         west: "url('/public/imgs/west/west1.png')",
         wed: "url('/public/imgs/wed/wed1.png')",
         mine: "url('/public/imgs/mine/mine5.png')",
