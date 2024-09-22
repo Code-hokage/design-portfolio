@@ -62,10 +62,10 @@ export const Socials = [
 export const WebProjectsItems = [
   {
     id: "1",
-    url: "imgs/ihatins/ihat5.png",
+    url: "imgs/web/project1/project1.jpg",
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgImg: "bg-ihatins",
+    bgImg: "bg-project1Mockup",
     bgStyle: "bg-contain",
     // icon: {
     //   Icon: FaGithub,
@@ -80,17 +80,16 @@ export const WebProjectsItems = [
       githubUrl: "https://github.com/adnanaadam/ihatins",
     },
     images: [
-      { url: "/imgs/ihatins/ihat1.png" },
-      { url: "/imgs/ihatins/ihat2.jpg" },
-      { url: "/imgs/ihatins/ihat3.jpg" },
+      { url: "imgs/web/project1/showcase1.jpg" },
+      { url: "imgs/web/project1/showcase2.jpg" },
     ],
   },
   {
     id: "2",
-    url: "imgs/west/west1.png",
+    url: "imgs/web/project2/project2.jpg",
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgImg: "bg-ihatins",
+    bgImg: "bg-project2Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
@@ -99,17 +98,16 @@ export const WebProjectsItems = [
       githubUrl: "https://github.com/adnanaadam/ihatins",
     },
     images: [
-      { url: "/imgs/west/west2.jpg" },
-      { url: "/imgs/west/west3.jpg" },
-      { url: "/imgs/west/west4.png" },
+      { url: "imgs/web/project2/showcase3.jpg" },
+      { url: "imgs/web/project2/showcase4.jpg" },
     ],
   },
   {
     id: "3",
-    url: "imgs/wed/wed1.png",
+    url: "imgs/web/project3/project3.jpg",
     title: "Networking Opportunities",
     description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgImg: "bg-ihatins",
+    bgImg: "bg-project3Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
@@ -118,17 +116,16 @@ export const WebProjectsItems = [
       githubUrl: "https://github.com/adnanaadam/ihatins",
     },
     images: [
-      { url: "/imgs/wed/wed2.png" },
-      { url: "/imgs/wed/wed3.png" },
-      { url: "/imgs/wed/wed4.jpg" },
+      { url: "imgs/web/project3/showcase5.jpg" },
+      { url: "imgs/web/project3/showcase6.jpg" },
     ],
   },
   {
     id: "4",
-    url: "imgs/mine/mine5.png",
+    url: "imgs/web/project4/project4.jpg",
     title: "Professional Growth",
     description: "Lorem, ipsuidem impedit autsit nisi.",
-    bgImg: "bg-ihatins",
+    bgImg: "bg-project4Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
@@ -137,17 +134,16 @@ export const WebProjectsItems = [
       githubUrl: "https://github.com/adnanaadam/ihatins",
     },
     images: [
-      { url: "/imgs/mine/mine1.png" },
-      { url: "/imgs/mine/mine2.png" },
-      { url: "/imgs/mine/mine3.png" },
+      { url: "imgs/web/project4/showcase7.jpg" },
+      { url: "imgs/web/project4/showcase8.jpg" },
     ],
   },
   {
     id: "5",
-    url: "/imgs/otasco/otasco1.png",
+    url: "imgs/web/project5/project5.jpg",
     title: "Strategic Planning",
     description: "Lorem, ipsuidem impedit autsit nisi. Lorem, ipsuidem impedit autsit nisi",
-    bgImg: "bg-ihatins",
+    bgImg: "bg-project5Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
@@ -156,9 +152,8 @@ export const WebProjectsItems = [
       githubUrl: "https://github.com/adnanaadam/ihatins",
     },
     images: [
-      { url: "/imgs/otasco/otasco2.png" },
-      { url: "/imgs/otasco/otasco3.png" },
-      { url: "/imgs/otasco/otasco4.png" },
+      { url: "imgs/web/project5/showcase9.jpg" },
+      { url: "imgs/web/project5/showcase10.jpg" },
     ],
   },
 ];

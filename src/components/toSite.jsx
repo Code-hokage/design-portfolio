@@ -23,7 +23,7 @@ const ToSite = ({ siteName, hrefUrl, githubName, githubUrl }) => {
   return (
     <>
       <div
-        className={`flex flex-col items-start justify-between gap-4 py-2 transition-all cursor-pointer ${
+        className={`flex flex-col items-start justify-between gap-4 py-2 font-semibold transition-all cursor-pointer ${
           transitioning
             ? "opacity-0 -translate-x-4 duration-0"
             : "opacity-100 translate-x-0 duration-500"
