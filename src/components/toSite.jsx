@@ -32,13 +32,16 @@ const ToSite = ({ siteName, hrefUrl, githubName, githubUrl }) => {
         <Link
           to={hrefUrl}
           className="inline-flex items-center gap-2 *:transition-transform *:duration-500 group"
+          onClick={() => alert("site still in progress")}
         >
           <span className="group-hover:text-blue">{siteName}</span>
           <FaArrowRight className="inline group-hover:text-blue group-hover:translate-x-2" />
         </Link>
+
         <Link
           to={githubUrl}
           className="inline-flex items-center gap-2 *:transition-transform *:duration-500 group"
+          onClick={() => alert("site still in progress")}
         >
           <span className="group-hover:text-blue">{githubName}</span>
           <FaArrowRight className="inline group-hover:text-blue group-hover:translate-x-2" />

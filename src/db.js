@@ -63,7 +63,7 @@ export const WebProjectsItems = [
   {
     id: "1",
     url: "imgs/web/project1/project1.jpg",
-    title: "Professional Growth",
+    title: "E-Commerce",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgImg: "bg-project1Mockup",
     bgStyle: "bg-contain",
@@ -75,9 +75,9 @@ export const WebProjectsItems = [
     // },
     toSite: {
       siteName: "Visit site",
-      hrefUrl: "https://ihatins1.com",
+      hrefUrl: "#1",
       githubName: "Github",
-      githubUrl: "https://github.com/adnanaadam/ihatins",
+      githubUrl: "",
     },
     images: [
       { url: "imgs/web/project1/showcase1.jpg" },
@@ -87,15 +87,15 @@ export const WebProjectsItems = [
   {
     id: "2",
     url: "imgs/web/project2/project2.jpg",
-    title: "Strategic Planning",
+    title: "Eduquest",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgImg: "bg-project2Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
-      hrefUrl: "https://ihatins2.com",
+      hrefUrl: "#2",
       githubName: "Github",
-      githubUrl: "https://github.com/adnanaadam/ihatins",
+      githubUrl: "",
     },
     images: [
       { url: "imgs/web/project2/showcase3.jpg" },
@@ -105,15 +105,15 @@ export const WebProjectsItems = [
   {
     id: "3",
     url: "imgs/web/project3/project3.jpg",
-    title: "Networking Opportunities",
+    title: "Web3 Network",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgImg: "bg-project3Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
-      hrefUrl: "https://ihatins3.com",
+      hrefUrl: "#3",
       githubName: "Github",
-      githubUrl: "https://github.com/adnanaadam/ihatins",
+      githubUrl: "",
     },
     images: [
       { url: "imgs/web/project3/showcase5.jpg" },
@@ -123,15 +123,15 @@ export const WebProjectsItems = [
   {
     id: "4",
     url: "imgs/web/project4/project4.jpg",
-    title: "Professional Growth",
+    title: "Anime X",
     description: "Lorem, ipsuidem impedit autsit nisi.",
     bgImg: "bg-project4Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
-      hrefUrl: "https://ihatins4.com",
+      hrefUrl: "#4",
       githubName: "Github",
-      githubUrl: "https://github.com/adnanaadam/ihatins",
+      githubUrl: "",
     },
     images: [
       { url: "imgs/web/project4/showcase7.jpg" },
@@ -141,15 +141,15 @@ export const WebProjectsItems = [
   {
     id: "5",
     url: "imgs/web/project5/project5.jpg",
-    title: "Strategic Planning",
+    title: "Movies Hub",
     description: "Lorem, ipsuidem impedit autsit nisi. Lorem, ipsuidem impedit autsit nisi",
     bgImg: "bg-project5Mockup",
     bgStyle: "bg-contain",
     toSite: {
       siteName: "Visit site",
-      hrefUrl: "https://ihatins.com",
+      hrefUrl: "#5",
       githubName: "Github",
-      githubUrl: "https://github.com/adnanaadam/ihatins",
+      githubUrl: "",
     },
     images: [
       { url: "imgs/web/project5/showcase9.jpg" },

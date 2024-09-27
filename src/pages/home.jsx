@@ -47,9 +47,9 @@ const Home = () => {
         <div className="flex w-full h-full pt-40 pb-12 justify-between">
           {/* web dev */}
           <div className="z-50 flex h-full flex-col justify-between items-start">
-            <div className="flex flex-col gap- items-start">
+            <div className="flex flex-col items-start">
               <h3 className="text-2xl">Adnan Adam</h3>
-              <div className="text-3xl font-semibold py-4 font-titleFont text-blue uppercase">
+              <div className="text-3xl font-semibold py-3 font-titleFont text-blue uppercase">
                 <span>frontend developer</span> <br />
                 <span className="text-[crimson]">+</span>
                 <span className="text-2xl">designer </span>
