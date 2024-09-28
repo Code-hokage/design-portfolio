@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const headerVariants = {
   hidden: {
     opacity: 0,
-    y: 500,
+    y: -200,
   },
   visible: {
     opacity: 1,
@@ -25,12 +25,12 @@ const buttonVariants = {
 };
 
 const Navbar = () => {
-  const activeLink = "text-blue text-base";
+  const activeLink = "text-blue";
 
   return (
     <>
       <motion.header
-        className="z-50 flex justify-between sticky -my-[2.1rem] bg-darkBlue shadow-md shadow-blue/30 top-0 items-center py-3 px-16"
+        className="z-50 w-full uppercase flex justify-between fixed bg-darkBlue shadow-md shadow-blue/30 top-0 items-center py-3 px-16"
         variants={headerVariants}
         initial="hidden"
         animate="visible"
@@ -57,7 +57,7 @@ const Navbar = () => {
                       key={link.path}
                       to={link.path}
                       className={({ isActive }) => {
-                        return isActive ? activeLink : "text-base hover:text-blue transition-all duration-500";
+                        return isActive ? activeLink : "hover:text-blue transition-all duration-500";
                       }}
                     >
                       {link.Name}
