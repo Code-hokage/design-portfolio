@@ -68,7 +68,7 @@ const Home = () => {
                 whileTap="tap"
               >
                 <Link
-                  to="/"
+                  to="/webprojects"
                   className="overflow-hidden relative text-center px-4 py-2 bg-grey text-blue border border-blue rounded-md text-base font-bold cursor-pointer z-10 group"
                 >
                   <span className="group-hover:text-darkBlue mr-2">

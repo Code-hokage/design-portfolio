@@ -63,11 +63,11 @@ const PageContent = ({ pageContent }) => {
         className={`bg-blue fixed right-0 top-0 bottom-0 w-2 rounded origin-top`}
       />
 
-      <div className="w-[45%] h-full">
-        <Background bgStyle={currentPageContent.bgStyle} />
-        <div className="w-full flex flex-col justify-between gap-6 pl-16 -my-12">
-          <div className="w-full flex items-start justify-between">
-            <div className="w-[70%]">
+      <div className="w-[50%] h-full">
+        <Background bgImg={currentPageContent.bgImg} bgStyle={currentPageContent.bgStyle} />
+        <div className="w-full flex flex-col justify-between gap-3 pl-16 -mt-10">
+          <div className="w-full flex items-start">
+            <div className="w-[80%]">
               <Textbox
                 title={currentPageContent.title}
                 description={currentPageContent.description}
@@ -116,7 +116,7 @@ const PageContent = ({ pageContent }) => {
         </div> */}
       </div>
 
-      <div className="w-[55%] h-full flex items-center justify-between gap-8 pt-16 pr-16">
+      <div className="w-[50%] h-full flex items-center justify-between gap-8 pt-16 pr-16">
         <div
           className="slide-cont w-full h-full px-4 flex flex-col items-center gap-4 overflow-y-scroll overflow-x-hidden no-scrollbar -skew-x-[10deg]"
           aria-live="polite"
@@ -177,7 +177,7 @@ const PageContent = ({ pageContent }) => {
               key={index}
               className={`mx-1 rounded-full my-2 cursor-pointer ${
                 currentIndex === index
-                  ? "bg-blue h-6 w-3 origin-center transition duration-500"
+                  ? "bg-blue h-6 w-3 origin-center transition-all duration-700"
                   : "h-3 w-3 border-2 border-blue"
               }`}
               onClick={() => setCurrentIndex(index)}

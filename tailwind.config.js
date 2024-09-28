@@ -14,11 +14,11 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/public/man.png')",
-        ihatins: "url('/public/imgs/ihatins/ihat5.png')",
-        west: "url('/public/imgs/west/west1.png')",
-        wed: "url('/public/imgs/wed/wed1.png')",
-        mine: "url('/public/imgs/mine/mine5.png')",
-        otasco: "url('/public/imgs/otasco/otasco1.png')",
+        project1Mockup: "url('/public/imgs/web/project1/project1-mockup.png')",
+        project2Mockup: "url('/public/imgs/web/project2/project2-mockup.png')",
+        project3Mockup: "url('/public/imgs/web/project3/project3-mockup.png')",
+        project4Mockup: "url('/public/imgs/web/project4/project4-mockup.png')",
+        project5Mockup: "url('/public/imgs/web/project5/project5-mockup.png')",
       },
       keyframes: {
         refine: {

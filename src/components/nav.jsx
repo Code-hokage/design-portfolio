@@ -36,7 +36,7 @@ const Navbar = () => {
         animate="visible"
       >
         <div className="">
-          <span className="text-3xl font-bold font-logoFont tracking-widest text-blue">
+          <span className="text-2xl font-bold font-logoFont tracking-widest text-blue">
             <Link to="/" className="uppercase">
               adnan
             </Link>
